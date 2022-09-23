@@ -1,0 +1,1 @@
+aqui ficam os arquivos publicos como o icone do site e robots.txt
