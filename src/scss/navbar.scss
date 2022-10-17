@@ -1,0 +1,26 @@
+@use 'variables/color.scss' as color;
+
+nav {
+    background-color: color.$color-2;
+    width: 100%;
+    height: 80px;
+    display: flex;
+
+    img {
+        height: 70px;
+        width: 90px;
+        left: 11.5556640625px;
+        top: 4px;
+        border-radius: 0px;
+    }
+
+    .text {
+        p:nth-child(1) {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 33px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+    }
+}

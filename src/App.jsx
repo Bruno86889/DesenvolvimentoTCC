@@ -1,23 +1,15 @@
-import { useState } from 'react'
 import './scss/index.scss'
-import './scss/button.scss'
-import { useEffect } from 'react'
+import { Intitucional } from './pages/Intitucional'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 const App = () => {
-  const [count, setCount] = useState(0)
-  const [color, setColor] = useState('')
-
-  useEffect(() => {
-    setColor(`rgb(${Math.random() * 255},${Math.random() * 255},${Math.random() * 255})`)
-  }, [count])
-
-  function handleClick(e) {
-    setCount(count + 1)
-  }
-
-  return <div className='colorWrap' style={{ background: color }}>
-    <button style={{ background: color }} onClick={handleClick}>{count}</button>
-  </div>
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Intitucional />} />
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
 export default App

@@ -1,19 +1,25 @@
+@use "variables/font.scss" as font;
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body,#root{
     width: 100vw;
     min-height: 100vh;
+    overscroll-behavior: none;
+    font-family: font.$font-family;
+    font-size: font.$medium-font-size;
+    overflow-x: hidden;
 }
-#root{
-    .colorWrap{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100vw;
-        height: 100vh;
-        transition: background-color 2s;
+ ::-webkit-scrollbar{
+    display: none;
+ }
+
+ @media screen and (max-width: 400px){
+    body {
+        overscroll-behavior-y: auto;
     }
-}
+ }

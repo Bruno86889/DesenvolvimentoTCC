@@ -1,0 +1,22 @@
+@use 'variables/font' as font;
+
+.small{
+    @include font.small-text();
+}
+.medium{
+    @include font.medium-text()
+}
+
+.large{
+    @include font.large-text();
+}
+
+h1{
+    @include font.title();
+}
+h2{
+    @include font.subtitle();
+}
+h3{
+    @include font.sectionTitle();
+}

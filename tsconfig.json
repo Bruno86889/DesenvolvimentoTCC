@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "module": "ESNext",
+        "baseUrl": ".",
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "moduleDetection": "auto",
+        "moduleResolution": "Node",
+        "allowJs": false,
+        "jsx": "react",
+        "allowUmdGlobalAccess": true,
+        "target": "ES6"
+    },
+    "exclude": ["node_modules"]
+}
