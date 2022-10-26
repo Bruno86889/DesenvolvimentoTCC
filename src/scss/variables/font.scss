@@ -1,12 +1,12 @@
 @use "color" as color;
 
-$small-font-size: 12pt;
-$medium-font-size: 14pt;
-$large-font-size: 16pt;
+$small-font-size: 12px;
+$medium-font-size: 14px;
+$large-font-size: 16px;
 
-$section-font-size: 18pt;
-$subtitle-font-size: 22pt;
-$title-font-size: 28pt;
+$section-font-size: 18px;
+$subtitle-font-size: 22px;
+$title-font-size: 28px;
 
 $font-family: 'Noto Sans';
 
@@ -16,6 +16,13 @@ $font-family: 'Noto Sans';
     display: flex;
     align-items: center;
     color: $color;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+
+    display: flex;
+    align-items: center;
+    text-indent: 16px;
 }
 
 @mixin medium-text ($color: color.$color-4) {
@@ -42,14 +49,14 @@ $font-family: 'Noto Sans';
     color: $color;
 }
 
-@mixin subtitle($color: color.$color-4){
+@mixin subtitle($color: color.$color-4) {
     font-weight: 700;
     font-size: $subtitle-font-size;
     line-height: 33px;
-    color: $color;    
+    color: $color;
 }
 
-@mixin sectionTitle($color: color.$color-4){
+@mixin sectionTitle($color: color.$color-4) {
     font-weight: 700;
     font-size: $section-font-size;
     line-height: 27px;

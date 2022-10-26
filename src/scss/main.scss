@@ -1,0 +1,18 @@
+main {
+    width: 100vw;
+    height: max-content;
+    scroll-snap-type: both mandatory;
+    scroll-snap-align: center;
+    scroll-behavior: smooth;
+
+}
+
+section {
+    width: 100vw;
+    min-height: 100vh;
+    // grid-template-columns: repeat(16,1fr);
+    // grid-template-rows: repeat(15,1fr);
+    scroll-snap-type: both mandatory;
+    scroll-snap-align: center;
+    scroll-behavior: smooth;
+}

@@ -1,5 +1,12 @@
 @use "variables/font.scss" as font;
 
+// usados em todas as páginas
+@import 'navbar.scss';
+@import 'footer.scss';
+@import 'main.scss';
+@import 'text.scss';
+@import 'main.scss';
+
 *{
     margin: 0;
     padding: 0;
@@ -12,7 +19,7 @@ body,#root{
     overscroll-behavior: none;
     font-family: font.$font-family;
     font-size: font.$medium-font-size;
-    overflow-x: hidden;
+    // overflow-x: hidden;
 }
  ::-webkit-scrollbar{
     display: none;

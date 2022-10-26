@@ -1,5 +1,4 @@
 import React from 'react';
-import '../scss/main.scss';
 
 export const Main = ({children, ...props})=>{
     return <main {...props}>

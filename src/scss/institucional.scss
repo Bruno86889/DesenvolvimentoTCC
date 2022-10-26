@@ -1,0 +1,17 @@
+@use 'variables/color.scss' as color;
+@use 'variables/screen.scss' as screen;
+
+img {
+    @include screen.grid-size(10, 16);
+}
+
+.description-square {
+    @include screen.grid-size(5, 16);
+    background-color: color.$color-2;
+
+    .text {
+        p{
+            color: color.$color-1;
+        }
+    }
+}

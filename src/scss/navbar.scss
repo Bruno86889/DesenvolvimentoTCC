@@ -1,26 +1,78 @@
 @use 'variables/color.scss' as color;
+@use 'variables/screen.scss' as screen;
+@use 'variables/font.scss' as font;
+$logo-width: 75px;
+$logo-height: 60px;
 
 nav {
+    @include screen.grid-size(1.5,16);
+    top: 0;
+    position: sticky;
     background-color: color.$color-2;
-    width: 100%;
-    height: 80px;
+    min-width: 100vw;
+    min-height: 64px;
     display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 0px color.$color-3;
+    
+    .logo {
+        width: $logo-width;
+        height: $logo-height;
 
-    img {
-        height: 70px;
-        width: 90px;
-        left: 11.5556640625px;
-        top: 4px;
+        margin: {
+            left: 32px;
+            right: 12px;
+        }
+
         border-radius: 0px;
+        cursor: pointer;
     }
 
     .text {
+        @include screen.grid-size(1.5,16);
         p:nth-child(1) {
             font-weight: 700;
             font-size: 24px;
             line-height: 33px;
             text-transform: uppercase;
             color: #FFFFFF;
+        }
+        p:nth-child(2){
+            color: #FFFFFF;
+            font-size: 16px;
+        }
+    }
+    .navLinks{
+        display: flex;
+        background-color: red;
+        height: 100%;
+        width: 100%;
+        .navItem{
+            width: 64px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: color.$color-1;
+            background-color: blue;
+            padding: 12px 0;
+            border: {
+                right: 3px solid black;
+            }
+            
+            font-size: font.$small-font-size;
+        }
+    }
+}
+
+nav.transparent{
+    background-color: transparent;
+    position: absolute;
+    .text{
+        p{
+            color: color.$color-4;
         }
     }
 }

@@ -24,10 +24,10 @@ export type TutorialSectionList = TutorialSectionData[]
 
 export const TutorialSection = (props:{data: TutorialSectionData})=>{
     return (
-        <section className='tutorial-section'>
+        <div className='tutorial-section'>
             <SectionTitle>{props.data.sectionTitle}</SectionTitle>
             <TurorialCarousel items={props.data.tutorials}/>
-        </section>
+        </div>
     )
 }
 
@@ -44,13 +44,13 @@ const TurorialCarousel = (props:{items:TutorialItems[]})=>{
 const TutorialItem = ({url,text,src}:TutorialItems)=>{
     return (
         <div className="tutorial-item">
-            <Link target={'_blank'} to={url}>
+            <a target={'_blank'} href={url}>
                 {src !== '' ?  <Image src={src}/> : <div className='img-section'></div>}
                 
                 <div className="tutorial-description">
                     <SmallText>{text}</SmallText>
                 </div>
-            </Link>
+            </a>
         </div>
     );
 }
