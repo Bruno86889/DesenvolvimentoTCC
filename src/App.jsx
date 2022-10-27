@@ -1,19 +1,19 @@
 import './scss/globals.scss'
-import Sobre from './pages/sobre'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Tutorial from './pages/tutorial'
 import Feed from './pages/index';
+import Tutorial from './pages/tutorial';
 import Galeria from './pages/galeria';
+import Sobre from './pages/sobre';
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Feed />} />
-        <Route path='/tutorial' element={<Tutorial />} />
-        <Route path='/sobre' element={<Sobre />} />
-        <Route path='/galeria' element={<Galeria />} />
-        
+        <Route path='/' element={<Feed/>} /> 
+        <Route path='/sobre' element={<Sobre/>} />
+        <Route path='/galeria' element={<Galeria/>} />       
+        <Route path='/tutorial' element={<Tutorial/>} />
+
       </Routes>
     </BrowserRouter>
   )

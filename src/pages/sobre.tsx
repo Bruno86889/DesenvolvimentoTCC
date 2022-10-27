@@ -1,13 +1,12 @@
-import { Navbar, Image } from '../componentes/Navbar'
+import { Navbar } from '../componentes/Navbar'
 import { Footer } from '../componentes/Footer'
 import { Main, Section } from '../componentes/Main'
 
 import React from 'react';
 
-import '../scss/institucional.scss';
-import etec from '../img/etec.jpeg';
+import etec from '../publics/etec2.svg';
 import { MediumText } from '../componentes/Text';
-
+import {Image} from '../componentes/Image'
 // texto estático
 
 const Sobre = () => {
@@ -32,7 +31,6 @@ const Sobre = () => {
                 </Section>
             </Main>
 
-            <Footer />
         </>
     )
 }

@@ -14,7 +14,7 @@ const Tutorial = () => {
             <Main>
                 <Section>
                     {tutoriais.map((section, i) => {
-                        return <TutorialSection data={section} />
+                        return <TutorialSection data={tutoriais} />
                     })}
                 </Section>
             </Main>

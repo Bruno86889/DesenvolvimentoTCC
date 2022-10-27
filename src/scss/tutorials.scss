@@ -9,7 +9,8 @@ section{
 .tutorial-section {
     $visible-items: 3;
     $gap-column: 80px;
-    $item-width: calc(100vw/16 * 4);
+    // $item-width: calc(100vw/16 * 4);
+    $item-width: calc(45px * 4);
     $scroll-container-width: calc(($item-width * $visible-items) + ($gap-column * ($visible-items - 1)) + 8px * 2);
 
     margin: 16px;

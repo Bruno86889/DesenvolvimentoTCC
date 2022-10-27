@@ -31,7 +31,7 @@ export const TutorialSection = (props:{data: TutorialSectionData})=>{
     )
 }
 
-const TurorialCarousel = (props:{items:TutorialItems[]})=>{
+const TurorialCarousel = (props:{items:TutorialList})=>{
     return (
         <div className="tutorial-carousel">
             {props.items.map((item,ind)=>{
