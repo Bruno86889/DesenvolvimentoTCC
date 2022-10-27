@@ -14,8 +14,8 @@ const routes:NavListLinks = [
         text: 'tutorial'
     },
     {
-        url: '/editais',
-        text: 'editais'
+        url: '/edital',
+        text: 'edital'
     },
     {
         url: '/galeria',

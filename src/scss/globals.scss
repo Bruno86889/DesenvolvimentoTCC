@@ -1,11 +1,15 @@
 @use "variables/font.scss" as font;
 
 // usados em todas as páginas
-@import 'navbar.scss';
-@import 'footer.scss';
-@import 'main.scss';
-@import 'text.scss';
-@import 'main.scss';
+@import 'components/navbar.scss';
+@import 'components/footer.scss';
+@import 'components/main.scss';
+@import 'components/text.scss';
+@import 'components/main.scss';
+
+@import 'sobre.scss';
+@import 'tutorial.scss';
+@import 'news.scss';
 
 *{
     margin: 0;

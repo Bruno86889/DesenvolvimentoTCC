@@ -4,13 +4,13 @@ import { Main, Section } from '../componentes/Main'
 
 import React from 'react';
 
-const Editais = () => {
+const Edital = () => {
     return (
         <>
             <Navbar />
             <Main>
                 <Section>
-
+                    <h1>Editais vão aqui</h1>
                 </Section>
             </Main>
             <Footer />
@@ -18,4 +18,4 @@ const Editais = () => {
     )
 }
 
-export default Editais;
+export default Edital;

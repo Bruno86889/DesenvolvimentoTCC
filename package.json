@@ -2,6 +2,7 @@
   "name": "desenvolvimento-tcc",
   "private": true,
   "version": "1.0.0",
+  "main": "dist/assets/index.ad028773.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

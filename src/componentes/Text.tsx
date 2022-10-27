@@ -1,5 +1,4 @@
 import React from 'react';
-import '../scss/text.scss';
 
 const MainTitle = ({children})=>{
     return (

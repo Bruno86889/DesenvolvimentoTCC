@@ -1,12 +1,11 @@
-import { Navbar } from '../componentes/Navbar'
-import { Footer } from '../componentes/Footer'
-import { Main, Section } from '../componentes/Main'
-
 import React from 'react';
-
-import etec from '../publics/etec2.svg';
+import { Navbar } from '../componentes/Navbar'
+import { Main, Section } from '../componentes/Main'
 import { MediumText } from '../componentes/Text';
 import {Image} from '../componentes/Image'
+
+import etec from '../publics/etec2.svg';
+
 // texto estático
 
 const Sobre = () => {

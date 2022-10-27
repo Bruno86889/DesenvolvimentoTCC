@@ -1,6 +1,7 @@
-@use 'variables/color.scss' as color;
-@use 'variables/screen.scss' as screen;
-@use 'variables/font.scss' as font;
+@use '../variables/color.scss' as color;
+@use '../variables/screen.scss' as screen;
+@use '../variables/font.scss' as font;
+
 $logo-width: 75px;
 $logo-height: 60px;
 
@@ -11,25 +12,35 @@ nav {
     background-color: color.$color-2;
     min-width: 100vw;
     min-height: 64px;
-    display: flex;
-    align-items: center;
+
+    display: grid;
+    grid-template-columns: 1fr 4fr 5fr;
+    grid-template-areas: "logo text links";
     box-shadow: 0px 4px 0px color.$color-3;
     
     .logo {
-        width: $logo-width;
-        height: $logo-height;
+        grid-area: logo;
+        display: flex;
+        align-items: center;
+        justify-content: right;
         margin: {
             left: 24px;
             right: 8px;
         }
-
-        border-radius: 0px;
-        cursor: pointer;
+        
+        img,svg{
+            width: $logo-width;
+            height: $logo-height;
+            cursor: pointer;
+        }
     }
 
     .text {
-        @include screen.grid-size(1.5,16);
-        background-color: blue;
+        grid-area: text;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
         p:nth-child(1) {
             font-weight: 700;
             font-size: 1.5rem;
@@ -39,13 +50,13 @@ nav {
         }
         p:nth-child(2){
             color: #FFFFFF;
-            font-size: 1rempx;
+            font-size: 1rem;
         }
     }
     .navLinks{
-        display: flex;
-        height: 100%;
         width: 100%;
+        height: 100%;
+        display: flex;
         align-items: center;
         flex-direction: row;
         justify-content: space-around;
@@ -61,12 +72,6 @@ nav {
             text-decoration: none;
             text-transform: uppercase;
             padding: 12px 0;
-            // border: {
-            //     right: 3px solid color.$color-1;
-            // }
-            // &:last-child{
-            //     border: none;
-            // }
         }
 
     }
@@ -80,12 +85,12 @@ nav.transparent{
     .text{
         background: transparent;
         p{
-            color: color.$color-4;
+            color: color.$color-1;
         }
     }
     .navLinks{
         .navItem{
-            color: color.$color-4;
+            color: color.$color-1;
         }
     }
 }

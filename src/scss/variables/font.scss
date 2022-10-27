@@ -1,4 +1,5 @@
 @use "color" as color;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 $small-font-size: 12px;
 $medium-font-size: 14px;
@@ -8,7 +9,7 @@ $section-font-size: 18px;
 $subtitle-font-size: 22px;
 $title-font-size: 28px;
 
-$font-family: 'Noto Sans';
+$font-family: 'Roboto';
 
 @mixin small-text ($color: color.$color-4) {
     font-size: $small-font-size;

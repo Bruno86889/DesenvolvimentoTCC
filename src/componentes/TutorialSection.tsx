@@ -1,16 +1,11 @@
-import '../scss/tutorials.scss'
-import { LegacyRef, RefObject, useCallback, useEffect, useRef, useState } from 'react';
-import {SectionTitle,MediumText, SmallText} from './Text';
-import { Image } from './Navbar';
-import etec from '../img/etec.jpeg';
-import {Link} from 'react-router-dom';
-
 import React from 'react';
+import {SectionTitle, SmallText} from './Text';
+import { Image } from './Image';
 
 export interface TutorialItems{
     url: string,
     text: string,
-    src: string
+    src: null | string 
 }
 
 export type TutorialList = TutorialItems[]

@@ -11,7 +11,7 @@ const Galeria = () => {
             <Navbar />
             <Main>
                 <Section>
-
+                    <h1>Fotos vão aqui</h1>
                 </Section>
             </Main>
             <Footer />

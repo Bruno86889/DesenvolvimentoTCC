@@ -1,5 +1,5 @@
-@use 'variables/color.scss' as color;
-@use 'variables/screen.scss' as screen;
+@use '../variables/color.scss' as color;
+@use '../variables/screen.scss' as screen;
 
 footer{
     @include screen.grid-size(1.5,16);

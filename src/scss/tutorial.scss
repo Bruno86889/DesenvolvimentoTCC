@@ -1,20 +1,21 @@
+@use 'sass:math' as math;
 @use 'variables/screen.scss' as screen;
 @use 'variables/color.scss' as color;
 
 
 section{
-    justify-content: center;
+    width: 100vw;
+    display: flex;
+    align-items: center;
 }
 
 .tutorial-section {
     $visible-items: 3;
     $gap-column: 80px;
-    // $item-width: calc(100vw/16 * 4);
-    $item-width: calc(45px * 4);
+    $item-width: calc(math.div(100vw, 16) * 4);
     $scroll-container-width: calc(($item-width * $visible-items) + ($gap-column * ($visible-items - 1)) + 8px * 2);
 
     margin: 16px;
-    width: max-content;
 
     .tutorial-carousel {
         padding: 8px;
