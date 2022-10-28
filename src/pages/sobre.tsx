@@ -1,8 +1,8 @@
 import React from 'react';
-import { Navbar } from '../componentes/Navbar'
-import { Main, Section } from '../componentes/Main'
-import { MediumText } from '../componentes/Text';
-import {Image} from '../componentes/Image'
+import { Navbar } from '../components/Navbar'
+import { Main, Section } from '../components/Main'
+import { MediumText } from '../components/Text';
+import {Image} from '../components/Image'
 
 import etec from '../publics/etec2.svg';
 

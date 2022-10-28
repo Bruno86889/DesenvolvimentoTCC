@@ -1,8 +1,8 @@
 import React from "react"
-import { Footer } from "../componentes/Footer"
-import { Section, Main } from "../componentes/Main"
-import { Navbar } from "../componentes/Navbar"
-import { TutorialSection } from "../componentes/TutorialSection"
+import { Footer } from "../components/Footer"
+import { Section, Main } from "../components/Main"
+import { Navbar } from "../components/Navbar"
+import { TutorialSection } from "../components/TutorialSection"
 
 //TODO: dados serão pegos do BD
 import { tutoriais } from "../data/tutorial"
@@ -18,7 +18,6 @@ const Tutorial = () => {
                     })}
                 </Section>
             </Main>
-
             <Footer />
         </>
     )

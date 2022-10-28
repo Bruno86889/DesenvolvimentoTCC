@@ -1,5 +1,5 @@
 import React from 'react';
-import { SmallText } from '../componentes/Text';
+import { SmallText } from '../components/Text';
 
 export const Footer = () => {
     return (

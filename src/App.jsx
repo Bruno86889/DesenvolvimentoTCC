@@ -1,4 +1,4 @@
-import './scss/globals.scss'
+import './styles/globals.scss'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import News from './pages/index';
 import Tutorial from './pages/tutorial';

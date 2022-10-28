@@ -1,5 +1,5 @@
 import React from "react";
-import { Image } from "./Image";
+import { Image } from "../components/Image";
 
 import img from '../publics/etec2.svg';
 

@@ -1,8 +1,8 @@
 import React from 'react';
-import { Navbar } from '../componentes/Navbar'
-import { Footer } from '../componentes/Footer'
-import { Main, Section } from '../componentes/Main'
-import {Feed} from '../componentes/Feed';
+import { Navbar } from '../components/Navbar'
+import { Footer } from '../components/Footer'
+import { Main, Section } from '../components/Main'
+import {Feed} from '../components/Feed';
 
 
 const News = () => {

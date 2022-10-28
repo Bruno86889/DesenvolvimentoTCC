@@ -1,0 +1,64 @@
+@use "color" as color;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+$small-font-size: 12px;
+$medium-font-size: 14px;
+$large-font-size: 16px;
+
+$section-font-size: 18px;
+$subtitle-font-size: 22px;
+$title-font-size: 28px;
+
+$font-family: 'Roboto';
+
+@mixin small-text ($color: color.$color-4) {
+    font-size: $small-font-size;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    color: $color;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+
+    display: flex;
+    align-items: center;
+    text-indent: 16px;
+}
+
+@mixin medium-text ($color: color.$color-4) {
+    font-size: $medium-font-size;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    color: $color;
+}
+
+@mixin large-text ($color: color.$color-4) {
+    font-size: $large-font-size;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    color: $color;
+}
+
+@mixin title($color: color.$color-4) {
+    font-weight: 700;
+    font-size: $title-font-size;
+    line-height: 44px;
+    text-transform: uppercase;
+    color: $color;
+}
+
+@mixin subtitle($color: color.$color-4) {
+    font-weight: 700;
+    font-size: $subtitle-font-size;
+    line-height: 33px;
+    color: $color;
+}
+
+@mixin sectionTitle($color: color.$color-4) {
+    font-weight: 700;
+    font-size: $section-font-size;
+    line-height: 27px;
+}

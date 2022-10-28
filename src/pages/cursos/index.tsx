@@ -4,9 +4,9 @@
 // .../novotec
 
 import React from "react";
-import { Footer } from "../../componentes/Footer";
-import { Main, Section } from "../../componentes/Main";
-import { Navbar } from "../../componentes/Navbar";
+import { Footer } from "../../components/Footer";
+import { Main, Section } from "../../components/Main";
+import { Navbar } from "../../components/Navbar";
 
 const Cursos = ()=>{
     return (
