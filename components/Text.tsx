@@ -1,37 +1,40 @@
 import React from 'react';
 
-
-const MainTitle = ({children})=>{
-    return (
-        <h1>{children}</h1>
-    )
+interface TextProps {
+    text: string
 }
 
-const SubTitle = (children)=>{
+const MainTitle = ({text}:TextProps)=>{
     return (
-        <h2>{children}</h2>
+        <h1>{text}</h1>
     )
 }
 
-const SectionTitle = ({children})=>{
+const SubTitle = ({text}:TextProps)=>{
     return (
-        <h3>{children}</h3>
+        <h2>{text}</h2>
     )
 }
 
-const SmallText = ({children})=>{
+const SectionTitle = ({text}:TextProps)=>{
     return (
-        <p className='small'>{children}</p>
+        <h3>{text}</h3>
     )
 }
-const MediumText = ({children})=>{
+
+const SmallText = ({text}:TextProps)=>{
     return (
-        <p className='medium'>{children}</p>
+        <p className='small'>{text}</p>
     )
 }
-const LargeText = ({children})=>{
+const MediumText = ({text}:TextProps)=>{
     return (
-        <p className='large'>{children}</p>
+        <p className='medium'>{text}</p>
+    )
+}
+const LargeText = ({text}:TextProps)=>{
+    return (
+        <p className='large'>{text}</p>
     )
 }
 export {MainTitle,SubTitle,SectionTitle,SmallText,MediumText,LargeText}

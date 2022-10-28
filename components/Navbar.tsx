@@ -10,9 +10,9 @@ import routes from '../data/routes';
 export const Navbar = ({ transparent = false }) => {
     return (
         <nav className={transparent ? 'transparent' : ''}>
-            {/* <div className="logo">
-            </div> */}
-            <Image className='logo' alt='logo' src={logo} width={70} height={65} style={{objectFit: "cover"}}/>
+            <div className="logo">
+                <Image  alt='logo' src={logo} width={70} height={65} style={{objectFit: "cover"}}/>
+            </div>
 
             <div className="text">
                 <p>etec fhg</p>

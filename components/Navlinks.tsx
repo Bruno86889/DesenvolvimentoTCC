@@ -11,8 +11,8 @@ const Navlink = (props: NavLinkType)=>{
 
 
     return (
-    <Link href={props.url}>
-        <a className={router.asPath === props.url ? 'navItem active' : 'navItem'}>{props.text}</a>
+    <Link className={router.asPath === props.url ? 'navItem active' : 'navItem'} href={props.url}>
+        {props.text}
     </Link>
     )
 }
