@@ -1,0 +1,36 @@
+@use "variables/font.scss" as font;
+
+// usados em todas as páginas
+@import 'components/navbar.scss';
+@import 'components/footer.scss';
+@import 'components/main.scss';
+@import 'components/text.scss';
+@import 'components/main.scss';
+
+@import 'sobre.scss';
+@import 'tutorial.scss';
+@import 'news.scss';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,#root{
+    width: 100vw;
+    min-height: 100vh;
+    overscroll-behavior: none;
+    font-family: font.$font-family;
+    font-size: font.$medium-font-size;
+    // overflow-x: hidden;
+}
+ ::-webkit-scrollbar{
+    display: none;
+ }
+
+//  @media screen and (max-width: 300px){
+//     body {
+//         overscroll-behavior-y: auto;
+//     }
+//  }

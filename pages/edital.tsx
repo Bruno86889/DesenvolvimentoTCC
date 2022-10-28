@@ -1,17 +1,16 @@
-import React from 'react';
 import { Navbar } from '../components/Navbar'
 import { Footer } from '../components/Footer'
 import { Main, Section } from '../components/Main'
-import {Feed} from '../components/Feed';
 
+import React from 'react';
 
-const News = () => {
+const Edital = () => {
     return (
         <>
             <Navbar />
             <Main>
                 <Section>
-                    <Feed/>
+                    <h1>Editais vão aqui</h1>
                 </Section>
             </Main>
             <Footer />
@@ -19,4 +18,4 @@ const News = () => {
     )
 }
 
-export default News
+export default Edital;

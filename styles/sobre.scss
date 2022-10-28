@@ -1,0 +1,36 @@
+@use 'variables/color.scss' as color;
+@use 'variables/screen.scss' as screen;
+@use 'variables/font.scss' as font;
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+.description-square {
+    width: 100vw;
+    min-height: calc(screen.$row-height * 6);
+    background-color: color.$color-2;
+
+    img{
+        @include screen.grid-size(10, 16);
+        object-fit: cover;
+    }
+    .text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 8px 32px;
+
+        p {
+            @include font.small-text(color.$color-1);
+            font-family: 'Noto Sans';
+            line-height: 24px;
+            display: flex;
+            align-items: center;
+            text-align: justify;
+            text-indent: 32px;
+        }
+    }
+}
