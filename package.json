@@ -2,14 +2,14 @@
   "name": "desenvolvimento-tcc",
   "private": true,
   "version": "1.0.0",
-  "main": "main.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "node main.js"
+    "start": "node main"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
