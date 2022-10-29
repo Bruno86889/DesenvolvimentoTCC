@@ -16,7 +16,7 @@ const Sobre = () => {
             <Main>
                 <Section >
                     <div className={sobre.backgroundImage}>
-                        <Image alt="" src={etec} fill />
+                        {/* <Image alt="" src={etec} fill /> */}
                     </div>
                     <div className={sobre.descriptionSquare}>
                         <div className={sobre.textContainer}>

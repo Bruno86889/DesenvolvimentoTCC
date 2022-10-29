@@ -2,14 +2,11 @@
 $screen-width: 100vw;
 $screen-height: 100vh;
 
-$column-width: math.div(100vw, 16);
-$row-height: math.div(100vh, 16);
-
 @mixin grid-size($row-span, $col-span,$rows: 16,$cols: 16) {
-    $column-width: math.div(100vw, $cols);
-    $row-height: math.div(100vh, $rows);
+    $column-width: math.div($screen-width, $cols);
+    $row-height: math.div($screen-height, $rows);
 
-    width: calc($column-width * $col-span);
-    height: calc($row-height * $row-span);
+    min-width: calc($column-width * $col-span);
+    min-height: calc($row-height * $row-span);
 }
 

@@ -7,12 +7,11 @@ $logo-height: 60px;
 
 nav {
     @include screen.grid-size(1.5,16);
+    width: 100vw;
     z-index: 100;
     top: 0;
     position: sticky;
     background-color: color.$color-2;
-    min-width: 100vw;
-    min-height: 64px;
 
     display: grid;
     grid-template-columns: 1fr 4fr 5fr;
@@ -93,5 +92,14 @@ nav.transparent{
         .navItem{
             color: color.$color-4;
         }
+    }
+}
+
+@media screen and (max-width:400px) {
+    nav{
+        @include screen.grid-size(1.5,16,8,8);
+        width: 100vw;
+        background-color: blue;
+        display: flex;
     }
 }

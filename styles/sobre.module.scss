@@ -2,10 +2,10 @@
 @use 'variables/screen.scss' as screen;
 @use 'variables/font.scss' as font;
 
+
 .backgroundImage{
     @include screen.grid-size(10, 16);
     display: flex;
-    position: relative;
     img{
         object-fit: cover
     }
@@ -14,7 +14,7 @@
 .descriptionSquare {
     @include screen.grid-size(6, 16);
     background-color: color.$color-2;
-
+    
     .textContainer {
         display: flex;
         align-items: center;
@@ -31,5 +31,11 @@
             text-align: justify;
             text-indent: 32px;
         }
+    }
+}
+
+@media screen and (max-width:400px){
+    .backgroundImage{
+        @include screen.grid-size(4,8,8,8);
     }
 }

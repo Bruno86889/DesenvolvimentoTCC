@@ -3,6 +3,7 @@ import { Footer } from "../components/Footer"
 import { Section, Main } from "../components/Main"
 import { Navbar } from "../components/Navbar"
 import { TutorialSection } from "../components/TutorialSection"
+
 import type {TutorialSectionData} from '../components/TutorialSection';
 
 //TODO: dados serão pegos do BD
