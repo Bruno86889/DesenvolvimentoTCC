@@ -22,12 +22,13 @@ export type NavListLinks = NavLinkType[]
 
 export interface NavListOfLinks 
 {
-    linkList: NavListLinks
+    linkList: NavListLinks,
+    active: boolean
 }
 
 export const NavLinks = (props:NavListOfLinks)=>{
     return (
-        <div className="navLinks">
+        <div className={props.active ? 'navLinks active': 'navLinks'}>
             {props.linkList.map((item,ind)=>{
                 return <Navlink key={ind} url={item.url} text={item.text} />
             })}

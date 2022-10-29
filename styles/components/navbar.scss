@@ -4,52 +4,66 @@
 
 $logo-width: 75px;
 $logo-height: 60px;
+// nav{
+//     *,&{
+//                 border: 1px solid black;
+//             }
+//     width: 100vw;
+//     background-color: color.$color-2;
+//     display: flex;
+//     flex-wrap: wrap;
+//     .logo{
+//         // width: max-content;
+//     }
+//     .text{
+//         max-width: 250px;
+//     }
+// }
 
 nav {
     @include screen.grid-size(1.5,16);
-    width: 100vw;
-    z-index: 100;
-    top: 0;
     position: sticky;
     background-color: color.$color-2;
-
-    display: grid;
-    grid-template-columns: 1fr 4fr 5fr;
-    grid-template-areas: "logo text links";
+    z-index: 100;
+    display: flex;
     align-items: center;
     box-shadow: 0px 4px 0px color.$color-3;
     
     .logo {
-        grid-area: logo;
+
         display: flex;
         align-items: center;
         justify-content: center;
         margin: {
-            left: 24px;
+            left: 16px;
             right: 8px;
         }
         
         img,svg{
             width: $logo-width;
             height: $logo-height;
+            object-fit: fill;
         }
     }
     
     .text {
-        grid-area: text;
         display: flex;
         flex-direction: column;
         justify-content: center;
         user-select: none;
-        
+        p{
+            color: color.$color-1;
+        }
         p:nth-child(1) {
             font-weight: 700;
             font-size: 1.5rem;
             line-height: 33px;
             text-transform: uppercase;
+            width: auto;
         }
         p:nth-child(2){
             font-size: 1rem;
+            width: auto;
         }
     }
     .navLinks{
@@ -96,9 +110,43 @@ nav.transparent{
 
 @media screen and (max-width:400px) {
     nav{
-        @include screen.grid-size(1.5,16,8,8);
-        width: 100vw;
-        background-color: blue;
-        display: flex;
+        @include screen.grid-size(1,8,8,8);
+        display: grid;
+        grid-template-columns: 1fr 2.2fr .8fr;
+        grid-template-rows: 1fr auto;
+        grid-template-areas: "logo text icon"
+                             "links links links";
+        flex-wrap: wrap;
+    
+        .logo{
+            grid-area: logo;
+            margin: 0;
+            height: 100%;
+        }
+        .text{
+            grid-area: text;
+        }
+        .icon{
+            grid-area: icon;
+            display: block;
+            width: 48px;
+            height: 48px;
+            background-color: black;
+        }
+        .navLinks{
+            display: none;
+        }
+        .navLinks[class*=active]{
+            grid-area: links;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: right;
+
+            .navItem{
+                height: 64px;
+                width: 100%;
+            }
+        }
     }
 }

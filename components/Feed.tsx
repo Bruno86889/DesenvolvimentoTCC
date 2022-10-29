@@ -17,7 +17,7 @@ export const Feed = () => {
 
                 <div className={news.othersNews}>
                     <div className={news.feedItem}>
-                        <Image alt="img" width={20} height={20} src={img} />
+                        <Image alt="img" src={img} />
                     </div>
                     <div className={news.feedItem}>
                         <Image alt="img" width={20} height={20} src={img} />

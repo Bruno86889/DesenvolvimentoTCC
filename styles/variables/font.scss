@@ -1,12 +1,20 @@
 @use "color" as color;
 
-$small-font-size: 12pt;
-$medium-font-size: 14pt;
-$large-font-size: 16pt;
+// $small-font-size: 12pt;
+// $medium-font-size: 14pt;
+// $large-font-size: 16pt;
 
-$section-font-size: 18pt;
-$subtitle-font-size: 22pt;
-$title-font-size: 28pt;
+// $section-font-size: 18pt;
+// $subtitle-font-size: 22pt;
+// $title-font-size: 28pt;
+
+$small-font-size: 1rem;
+$medium-font-size: 1.25rem;
+$large-font-size: 2rem;
+
+$section-font-size: 1rem;
+$subtitle-font-size: 1rem;
+$title-font-size: 1rem;
 
 $font-family: 'Roboto',sans-serif;
 
@@ -17,17 +25,16 @@ $font-family: 'Roboto',sans-serif;
     align-items: center;
     color: $color;
     font-style: normal;
-    // line-height: 19px;
+    line-height: 19px;
 
     font-family: $font-family;
     display: flex;
     align-items: center;
-    // text-indent: 16px;
 }
 
 @mixin medium-text ($color: color.$color-4) {
     font-size: $medium-font-size;
-    line-height: 19px;
+    // line-height: 19px;
     display: flex;
     align-items: center;
     color: $color;

@@ -1,20 +1,24 @@
-import { Navbar } from '../../components/Navbar'
-import { Footer } from '../../components/Footer'
-import { Main, Section } from '../../components/Main'
+import { Section } from '../../components/Main'
 
 import React from 'react';
+import { Layout, MetaData } from '../../components/Root';
+import { LargeText } from '../../components/Text';
+
+
+const metaData:MetaData = {
+    title: 'Nome do curso',
+    description: 'descrição do curso',
+    keywords:'curso, ensino médio, técnico intergado',
+    robots:'index'
+}
 
 const Projeto = () => {
     return (
-        <>
-            <Navbar />
-            <Main>
-                <Section>
-                    <p>Projetos vem dinamicamente para cá</p>
-                </Section>
-            </Main>
-            <Footer />
-        </>
+        <Layout meta={metaData}>
+            <Section>
+                <LargeText text='Os projetos vão aqui'/>
+            </Section>
+        </Layout>
     )
 }
 

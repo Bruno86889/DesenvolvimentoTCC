@@ -1,13 +1,5 @@
 @use '../variables/screen.scss' as screen;
 
-main {
-    scroll-snap-type: both mandatory;
-    scroll-snap-align: center;
-    scroll-behavior: smooth;
-    display: flex;
-    flex-direction: column;
-}
-
 section {
     @include screen.grid-size(14.5,16);
     display: flex;
@@ -19,9 +11,5 @@ section {
 @media screen and (max-width:400px){
     section{
         @include screen.grid-size(2,8,8,8);
-        background-color: green;
-    }
-    main{
-        @include screen.grid-size(8,8,8,8);
     }
 }

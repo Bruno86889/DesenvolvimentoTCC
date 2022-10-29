@@ -9,8 +9,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Roboto";
 }
-
+html{
+    width: 100vw;
+}
 body{
     width: 100vw;
     min-height: 100vh;
