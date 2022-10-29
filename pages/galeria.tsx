@@ -1,21 +1,25 @@
-import { Navbar } from '../components/Navbar'
-import { Footer } from '../components/Footer'
-import { Main, Section } from '../components/Main'
+import { Section } from '../components/Main'
 
 import React from 'react';
+import { Layout, MetaData } from '../components/Root';
+import { MediumText } from '../components/Text';
+
+
+const metaData: MetaData = {
+    title: 'Fotos da escola',
+    description: '',
+    keywords: '',
+    robots: ''
+}
 
 // TODO: pegar imagens do BD
 const Galeria = () => {
     return (
-        <>
-            <Navbar />
-            <Main>
-                <Section>
-                    <h1>Fotos vão aqui</h1>
-                </Section>
-            </Main>
-            <Footer />
-        </>
+        <Layout meta={metaData}>
+            <Section>
+                <MediumText text='Fotos da escola vão aqui' />
+            </Section>
+        </Layout>
     )
 }
 

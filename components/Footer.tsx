@@ -1,7 +1,7 @@
 import React from 'react';
 import { SmallText } from './Text';
 
-export const Footer = () => {
+const Footer = () => {
     return (
         <footer>
             <div className="text">
@@ -21,3 +21,4 @@ export const Footer = () => {
         </footer>
     )
 }
+export default Footer;

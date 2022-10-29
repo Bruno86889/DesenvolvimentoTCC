@@ -1,25 +1,27 @@
-//TODO: pegar rotas do banco de dados
-// .../etim
-// .../modular
-// .../novotec
+// TODO: rota dinamica do curso
 
-import {NextPage} from 'next';
-import {Navbar} from '../../components/Navbar'
-import {Main,Section} from '../../components/Main'
-import {Footer} from '../../components/Footer'
+import { Section } from '../../components/Main'
 
-const Cursos:NextPage = ()=>{
+import React from 'react';
+import { Layout, MetaData } from '../../components/Root';
+import { MediumText } from '../../components/Text';
+
+
+const metaData:MetaData = {
+    title: 'Nome do curso',
+    description: 'descrição do curso',
+    keywords:'curso, ensino médio, técnico intergado',
+    robots:'index'
+}
+
+const Curso = () => {
     return (
-        <>
-        <Navbar/>
-        <Main>
+        <Layout meta={metaData}>
             <Section>
-
+                <MediumText text='cursos vem dinamicamete para cá pelo BD'/>
             </Section>
-        </Main>
-        <Footer/>
-        </>
+        </Layout>
     )
 }
 
-export default Cursos
+export default Curso;

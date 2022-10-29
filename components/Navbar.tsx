@@ -1,22 +1,20 @@
 import React from 'react'
-import Link from 'next/link';
 import Image from 'next/image';
+import { LargeText, SmallText } from './Text';
 import {NavLinks} from './Navlinks';
-
-import logo from '../public/logo.svg'
 
 import routes from '../data/routes';
 
-export const Navbar = ({ transparent = false }) => {
+const Navbar = ({ transparent = false }) => {
     return (
         <nav className={transparent ? 'transparent' : ''}>
             <div className="logo">
-                <Image  alt='logo' src={logo} width={70} height={65} style={{objectFit: "cover"}}/>
+                <Image  alt='logo' src={'/logo.svg'} width={70} height={65} style={{objectFit: "cover"}}/>
             </div>
 
             <div className="text">
-                <p>etec fhg</p>
-                <p>Ferrúcio humberto gazzetta | Nova Odessa</p>
+                <LargeText text='etec fhg'/>
+                <SmallText text='Ferrúcio Humberto Gazzetta | Nova Odessa'/>
             </div>
 
             <NavLinks linkList={routes} />
@@ -24,4 +22,4 @@ export const Navbar = ({ transparent = false }) => {
     )
 }
 
-
+export default Navbar;

@@ -8,7 +8,7 @@ $section-font-size: 18pt;
 $subtitle-font-size: 22pt;
 $title-font-size: 28pt;
 
-$font-family: 'Roboto';
+$font-family: 'Roboto',sans-serif;
 
 @mixin small-text ($color: color.$color-4) {
     font-size: $small-font-size;
@@ -17,13 +17,12 @@ $font-family: 'Roboto';
     align-items: center;
     color: $color;
     font-style: normal;
-    font-weight: 400;
-    line-height: 19px;
+    // line-height: 19px;
 
     font-family: $font-family;
     display: flex;
     align-items: center;
-    text-indent: 16px;
+    // text-indent: 16px;
 }
 
 @mixin medium-text ($color: color.$color-4) {

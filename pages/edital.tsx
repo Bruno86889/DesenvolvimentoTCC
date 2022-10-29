@@ -1,20 +1,23 @@
-import { Navbar } from '../components/Navbar'
-import { Footer } from '../components/Footer'
-import { Main, Section } from '../components/Main'
+import {Section } from '../components/Main'
 
 import React from 'react';
+import { Layout, MetaData } from '../components/Root';
+import { LargeText } from '../components/Text';
+
+const metaData:MetaData = {
+    title: 'Editais',
+    description: '',
+    keywords:'',
+    robots:''
+}
 
 const Edital = () => {
     return (
-        <>
-            <Navbar />
-            <Main>
-                <Section>
-                    <h1>Editais vão aqui</h1>
-                </Section>
-            </Main>
-            <Footer />
-        </>
+        <Layout meta={metaData}>
+            <Section>
+                <LargeText text='Editais vão aqui'/>
+            </Section>
+        </Layout>
     )
 }
 

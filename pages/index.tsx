@@ -1,21 +1,23 @@
-import React from 'react';
-import { Navbar } from '../components/Navbar'
-import { Footer } from '../components/Footer'
-import { Main, Section } from '../components/Main'
-import {Feed} from '../components/Feed';
+import React, { ReactElement } from 'react';
+import { Section } from '../components/Main'
+import { Feed } from '../components/Feed';
+import { Layout, MetaData } from '../components/Root';
+import { NextPage } from 'next';
 
-const News = () => {
-    return (
-        <>
-            <Navbar />
-            <Main>
-                <Section>
-                    <Feed />
-                </Section>
-            </Main>
-            <Footer />
-        </>
-    )
+const metaData:MetaData = {
+    title: 'Eventos e documentos',
+    description: '',
+    keywords:'',
+    robots:''
 }
 
+const News: NextPage = () => {
+    return (
+        <Layout meta={metaData}>
+            <Section>
+                <Feed />
+            </Section>
+        </Layout>
+    )
+}
 export default News

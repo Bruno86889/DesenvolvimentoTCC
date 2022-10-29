@@ -1,22 +1,26 @@
 import React from 'react';
-import { Navbar } from '../components/Navbar'
-import { Main, Section } from '../components/Main'
+import Navbar from '../components/Navbar'
+import { Section } from '../components/Main'
 import { MediumText } from '../components/Text';
 import Image from 'next/image';
-
-import etec from '../public/etec2.svg';
+import { MetaData, RootLayout } from '../components/Root';
 import sobre from '../styles/sobre.module.scss';
+import { NextPage } from 'next';
 
-// texto estático
+const metaData:MetaData = {
+    title: 'Etec Ferrúcio Humberto Gazzetta',
+    description: '',
+    keywords:'',
+    robots:''
+}
 
-const Sobre = () => {
+const Sobre:NextPage = () => {
     return (
-        <>
+        <RootLayout meta={metaData}>
             <Navbar transparent={true} />
-            <Main>
                 <Section >
                     <div className={sobre.backgroundImage}>
-                        {/* <Image alt="" src={etec} fill /> */}
+                        <Image alt="" src='/etec2.svg' fill />
                     </div>
                     <div className={sobre.descriptionSquare}>
                         <div className={sobre.textContainer}>
@@ -29,10 +33,8 @@ const Sobre = () => {
                         </div>
                     </div>
                 </Section>
-            </Main>
-
-        </>
+        </RootLayout>
     )
 }
 
-export default Sobre
+export default Sobre;

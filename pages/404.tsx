@@ -1,15 +1,22 @@
 import type { NextPage } from 'next'
-import Image from 'next/image'
-import { NavLinks } from '../components/Navlinks'
-import type {NavListOfLinks,NavLinkType} from '../components/Navlinks'
-import { Navbar } from '../components/Navbar'
+import { Layout, MetaData } from '../components/Root'
+import { LargeText } from '../components/Text'
+import { Section } from '../components/Main'
+
+const metaData:MetaData = {
+  title: 'Página não encontrada',
+  description: '',
+  keywords:'',
+  robots:'noIndex'
+}
 
 const Page404: NextPage = () => {
   return (
-    <>
-    <Navbar />   
-    <h1>Não encontrado</h1>
-    </>
+    <Layout meta={metaData}>
+      <Section>
+        <LargeText text='404, Página não encontrada' />
+      </Section>
+    </Layout>
   )
 }
 
