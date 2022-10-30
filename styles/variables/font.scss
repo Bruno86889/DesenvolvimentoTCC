@@ -8,15 +8,15 @@
 // $subtitle-font-size: 22pt;
 // $title-font-size: 28pt;
 
-$small-font-size: 1rem;
-$medium-font-size: 1.25rem;
-$large-font-size: 2rem;
+$small-font-size: 1em;
+$medium-font-size: 1.10em;
+$large-font-size: 1.25em;
 
-$section-font-size: 1rem;
-$subtitle-font-size: 1rem;
-$title-font-size: 1rem;
+$section-font-size: 1.25em;
+$subtitle-font-size: 1.5em;
+$title-font-size: 1.5em;
 
-$font-family: 'Roboto',sans-serif;
+$font-family: 'Noto Sans',sans-serif;
 
 @mixin small-text ($color: color.$color-4) {
     font-size: $small-font-size;

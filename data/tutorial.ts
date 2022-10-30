@@ -2,22 +2,17 @@ import {TutorialItems,TutorialSectionList,TutorialList} from '../components/Tuto
 
 const servicos:TutorialList = [
     {
-        src: "",
-        text: "Vestibulinho",
-        url: "https://www.cps.sp.gov.br/vestibulinho/"
-    },
-    {
-        src: "",
+        src: "/nsa.svg",
         text: "NSA",
         url: "https://nsa.cps.sp.gov.br/"
     },
     {
-        src: "",
+        src: "/email.svg",
         text: "Email Institucional",
         url: "http://www.etec.sp.gov.br/view/Default.aspx"
     },
     {
-        src: "",
+        src: "/teams.svg",
         text: "Microsoft Teams",
         url: "https://teams.microsoft.com/"
     }
@@ -36,7 +31,7 @@ const emailIntitucional:TutorialList = [
     },
     {
         src: "",
-        text: "Redefinir senha do Email Institucional",
+        text: "Redefinir senha",
         url: "https://youtu.be/YGPiypDRBLo"
     }
 ]
@@ -48,17 +43,17 @@ const microsoftTeams:TutorialList = [
     },
     {
         src: "",
-        text: "Navegar no Teams pelo computador",
+        text: "Navegar pelo computador",
         url: "https://www.youtube.com/watch?v=VY5oz5OUG5k"
     },
     {
         src: "",
-        text: "Acessar aulas do Teams pelo computador",
+        text: "Acessar aulas pelo computador",
         url: "https://youtu.be/AtT4gSiDWEw"
     },
     {
         src: "",
-        text: "Entregar tarefas do Teams pelo computador",
+        text: "Entregar tarefas pelo computador",
         url: "https://youtu.be/UXIGBclUb3g"
     },
     {
@@ -73,7 +68,7 @@ const microsoftTeams:TutorialList = [
     },
     {
         src: "",
-        text: "Entregar tarefas do Teams pelo celular",
+        text: "Entregar tarefas pelo celular",
         url: "https://www.youtube.com/watch?v=VY5oz5OUG5k"
     },
     {
@@ -83,7 +78,7 @@ const microsoftTeams:TutorialList = [
     },
     {
         src: "",
-        text: "Interagir com o professor no Teams",
+        text: "Interagir com o professor",
         url: "https://youtu.be/3OwrL5d-jVI"
     }
 ]

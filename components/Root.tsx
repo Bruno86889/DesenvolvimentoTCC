@@ -21,7 +21,7 @@ export const RootLayout = ({ children, meta }: { children: JSX.Element | JSX.Ele
             <meta name="robots" content={meta.robots} />
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" />
-            <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+            <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet" />
             <link rel="icon" href="/logo.svg" type="image/x-icon" />
 
             <title>{meta.title}</title>

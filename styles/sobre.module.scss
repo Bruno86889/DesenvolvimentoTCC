@@ -1,31 +1,51 @@
+@use 'sass:math' as math;
 @use 'variables/color.scss' as color;
 @use 'variables/screen.scss' as screen;
 @use 'variables/font.scss' as font;
 
 
-.backgroundImage{
-    @include screen.grid-size(10, 16);
-    display: flex;
-    img{
-        object-fit: cover
-    }
-}
+.section{
+    align-items: baseline;
+    justify-items: baseline;
 
-.descriptionSquare {
-    @include screen.grid-size(6, 16);
-    background-color: color.$color-2;
-    
-    .textContainer {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        padding: 8px 32px;
+    .backgroundImage{
+        // *{border: 10px solid black;}
+        width: 100vw;
+        display: grid;
+        img{
+            width: 100%;
+            height: calc(math.div(100vh,16) * 8);
+            object-fit: cover;    
+        }
     }
+    
+    .descriptionSquare {
+        background-color: color.$color-2;
+        height: calc(math.div(100vh,16) * 8);
+        
+        .textContainer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 8px 32px;
+
+            p{
+                text-align: justify;
+                color: color.$color-1;
+            }
+        }
+    }
+
 }
 
 @media screen and (max-width:400px){
-    .backgroundImage{
-        @include screen.grid-size(4,8,8,8);
+    .section{
+        .backgroundImage{
+            @include screen.grid-size(4,8,8,8);
+        }
+        .descriptionSquare{
+            height: max-content;
+        }
     }
 }

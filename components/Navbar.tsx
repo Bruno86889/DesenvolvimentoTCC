@@ -21,7 +21,11 @@ const Navbar = ({ transparent = false }) => {
             <div className="icon" onClick={()=>{
                 setActive(!active)
                 console.log(active)
-            }}></div>
+            }}>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <NavLinks active={active} linkList={routes} />
         </nav>
     )

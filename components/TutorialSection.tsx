@@ -43,8 +43,9 @@ const TutorialItem = ({url,text,src}:TutorialItems)=>{
     return (
         <div className={tutorial.tutorialItem}>
             <Link target={'_blank'} href={url}>
-                {/* {src !== '' ?  <Image alt='' width={40} height={40} src={src}/> : <div className='img-section'></div>} */}
-                <div className={tutorial.imgSection}></div>
+               <div className={tutorial.imgSection}>
+                    {src && <Image alt='' width={40} height={40} src={src}/>}
+               </div>
                 
                 <div className={tutorial.tutorialDescription}>
                     <SmallText text={text}></SmallText>

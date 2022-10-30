@@ -4,33 +4,62 @@ import { Section } from '../../components/Main'
 
 import React from 'react';
 import { Layout, MetaData } from '../../components/Root';
-import { MediumText, SectionTitle } from '../../components/Text';
-import CursoSection from '../../components/CardCurso';
+import { LargeText, MainTitle, MediumText, SectionTitle, SmallText, SubTitle } from '../../components/Text';
+import CursoSection, { CardCursoData } from '../../components/CursoSection';
 
 const metaData:MetaData = {
-    title: 'Nome do curso',
+    title: 'Modalidades e Cursos',
     description: 'descrição do curso',
     keywords:'curso, ensino médio, técnico intergado',
     robots:'index'
 }
 
+const cursos:CardCursoData[] = [
+        {
+            nome: "Administração",
+            description: '',
+            img: '',
+            page: ""
+        },
+        {
+            nome: "Desenvolvimento de Sistemas",
+            description: '',
+            img: '',
+            page: ""
+        },
+        {
+            nome: "Marketing",
+            description: '',
+            img: '',
+            page: ""
+        },
+        {
+            nome: "Marketing",
+            description: '',
+            img: '',
+            page: ""
+        },
+        {
+            nome: "Marketing",
+            description: '',
+            img: '',
+            page: ""
+        },
+    ]
+
 const Curso = () => {
     return (
         <Layout meta={metaData}>
             <Section>
-                <SectionTitle text='Ensino Técnico Integrado Ao Ensino Médio'/>
+                <MainTitle text='maintitle'/>
+                <SubTitle text='subtitle'/>
+                <SectionTitle text='sectionTitle'/>
+                <LargeText text='largetext'/>
+                <MediumText text='mediumtext'/>
+                <SmallText text='smalltext'/>
+                <MainTitle text='Ensino Técnico Integrado Ao Ensino Médio'/>
                 <MediumText text='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quasi ad unde quibusdam repudiandae cum nesciunt, esse excepturi dicta, perferendis mollitia quae provident laboriosam consequuntur modi voluptatem sunt libero odit.'/>
-                <CursoSection nome={'Um curso qualquer'} img={'/etec2.svg'} description={'texto que vai em um curso'} page={'/erro'}/>
-            </Section>
-            <Section>
-                <SectionTitle text='Ensino Técnico Módular'/>
-                <MediumText text='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quasi ad unde quibusdam repudiandae cum nesciunt, esse excepturi dicta, perferendis mollitia quae provident laboriosam consequuntur modi voluptatem sunt libero odit.'/>
-                <CursoSection nome={'mais uma seção'} img={'/etec1.svg'} description={'texto que vai em um curso'} page={'/erro'}/>
-            </Section>
-            <Section>
-                <SectionTitle text='NovoTec'/>
-                <MediumText text='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quasi ad unde quibusdam repudiandae cum nesciunt, esse excepturi dicta, perferendis mollitia quae provident laboriosam consequuntur modi voluptatem sunt libero odit.'/>
-                <CursoSection nome={'mais uma seção'} img={'/etec1.svg'} description={'texto que vai em um curso'} page={'/erro'}/>
+                <CursoSection cursos={cursos} />
             </Section>
         </Layout>
     )
