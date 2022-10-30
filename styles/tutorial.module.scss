@@ -27,7 +27,7 @@
 
         .tutorialItem {
             width: calc(math.div(100vw,16) * 4);
-
+            min-width: 300px;
             min-height: 180px;
             display: flex;
             flex-direction: column;

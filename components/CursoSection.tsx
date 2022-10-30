@@ -1,7 +1,8 @@
-import { LargeText, MediumText, SmallText } from "./Text";
+import { LargeText, MainTitle, MediumText, SmallText } from "./Text";
 import Image from "next/image";
 import Link from "next/link";
 import cursos from "../styles/cursos.module.scss";
+import { Section } from "./Main";
 
 export interface CardCursoData {
     nome: string,
@@ -10,8 +11,27 @@ export interface CardCursoData {
     page: string
 }
 
-type CardCursoDataList = {
+export type CardCursoDataList = {
     cursos:CardCursoData[]
+}
+
+export type CursoPageData = {
+    tipoDeCurso: string,
+    descricao: string,
+    cursos: CardCursoData[]
+}
+
+export type CursoPageDataList = CursoPageData[]
+
+
+const CursoPageSection = (props:{data:CursoPageData})=>{
+    return (
+        <Section className={cursos.cursoPageSection}>
+                <MainTitle text={props.data.tipoDeCurso}/>
+                <SmallText text={props.data.descricao}/>
+                <CursoSection cursos={props.data.cursos} />
+        </Section>
+    )
 }
 
 const CursoSection =(props:CardCursoDataList)=>{
@@ -39,7 +59,4 @@ const CardCurso = (props:CardCursoData)=>{
     )
 }
 
-// export async function getStaticProps({params}) {
-    
-// }
-export default CursoSection;
+export default CursoPageSection;

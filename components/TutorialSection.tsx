@@ -23,8 +23,8 @@ export type TutorialSectionList = TutorialSectionData[]
 export const TutorialSection = (props:{data: TutorialSectionData})=>{
     return (
         <div className={tutorial.tutorialSection}>
-            <SectionTitle key={1} text={props.data.sectionTitle}></SectionTitle>
-            <TurorialCarousel key={1} items={props.data.tutorials}/>
+            <SectionTitle text={props.data.sectionTitle} />
+            <TurorialCarousel items={props.data.tutorials}/>
         </div>
     )
 }

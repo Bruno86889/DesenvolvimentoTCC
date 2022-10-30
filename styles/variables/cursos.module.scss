@@ -1,0 +1,43 @@
+@use 'sass:math' as math;
+@use  'variables/color.scss' as color;
+
+.cursoSection{
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    .cardCurso{
+        min-width: 320px;
+        width: calc(math.div(100vw,16) * 4.5);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        p{
+            width: max-content;
+        }
+        img{
+            height: calc(math.div(100vh,16) * 5.5);
+            width: 100%;
+            object-fit: cover;
+        }
+        .description{
+            width: 100%;
+            background-color: yellow;
+            p{
+
+            }
+        }
+        a{
+            padding: 8px 16px;
+            display: flex;
+            margin-top: 16px;
+            box-shadow: 0 8px 0 color.$color-3;
+            text-decoration: none;
+            text-transform: uppercase;
+            border: 1px solid color.$color-3;
+        }
+    }
+}

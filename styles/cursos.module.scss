@@ -1,43 +1,68 @@
 @use 'sass:math' as math;
-@use  'variables/color.scss' as color;
+@use 'variables/color.scss' as color;
 
-.cursoSection{
-    width: 100vw;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 16px;
-
-    .cardCurso{
-        min-width: 320px;
-        width: calc(math.div(100vw,16) * 4.5);
+.cursoPageSection {
+    h1{
+        width: calc(math.div(100vw, 16) *14.5);
+    }
+    p{
+        width: calc(math.div(100vw, 16) *14.5);
+        margin-bottom: 16px;
+        line-height: 24px;
+    }
+    .cursoSection {
+        width: calc(math.div(100vw, 16) *14.5);
         display: flex;
-        align-items: center;
-        flex-direction: column;
-        p{
-            width: max-content;
-        }
-        img{
-            height: calc(math.div(100vh,16) * 5.5);
-            width: 100%;
-            object-fit: cover;
-        }
-        .description{
-            width: 100%;
-            background-color: yellow;
-            p{
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 16px;
 
-            }
-        }
-        a{
-            padding: 8px 16px;
+        margin-bottom: 16px;
+
+        .cardCurso {
+            min-width: 320px;
+            width: calc(math.div(100vw, 16) * 4);
+            height: max-content;
             display: flex;
-            margin-top: 16px;
-            box-shadow: 0 8px 0 color.$color-3;
-            text-decoration: none;
-            text-transform: uppercase;
-            border: 1px solid color.$color-3;
+            align-items: center;
+            flex-direction: column;
+
+            p{
+                width: max-content;
+                text-transform: uppercase;
+                margin-bottom: 0;
+                line-height: normal;
+            }
+            img {
+                height: calc(math.div(100vh, 16) * 5);
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .description {
+                width: 100%;
+                height: 96px;
+                overflow-y: hidden;
+
+                p {
+                    font-size: 10pt;
+                    width: 100%;
+                    text-transform: none;
+                    text-align: center;
+                    margin-bottom: 0;
+                }
+            }
+
+            a {
+                padding: 8px 16px;
+                display: flex;
+                margin: 16px;
+                box-shadow: 0 8px 0 color.$color-3;
+                text-decoration: none;
+                text-transform: uppercase;
+                border: 1px solid color.$color-3;
+            }
         }
     }
 }
