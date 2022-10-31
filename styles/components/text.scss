@@ -11,6 +11,10 @@
     @include font.large-text();
 }
 
+.color-white{
+    color: white;
+}
+
 h1{
     @include font.title();
 }

@@ -9,19 +9,18 @@
     justify-items: baseline;
 
     .backgroundImage{
-        // *{border: 10px solid black;}
         width: 100vw;
         display: grid;
         img{
             width: 100%;
-            height: calc(math.div(100vh,16) * 8);
+            height: calc(math.div(100vh,16) * 10);
             object-fit: cover;    
         }
     }
     
     .descriptionSquare {
         background-color: color.$color-2;
-        height: calc(math.div(100vh,16) * 8);
+        min-height: calc(math.div(100vh,16) * 6);
         
         .textContainer {
             display: flex;
@@ -32,6 +31,8 @@
 
             p{
                 text-align: justify;
+                text-indent: 1.5em;
+                line-height: 1.5rem;
                 color: color.$color-1;
             }
         }
@@ -42,7 +43,7 @@
 @media screen and (max-width:400px){
     .section{
         .backgroundImage{
-            @include screen.grid-size(4,8,8,8);
+            @include screen.grid-size(6,8,8,8);
         }
         .descriptionSquare{
             height: max-content;

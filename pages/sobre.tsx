@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { MetaData, RootLayout } from '../components/Root';
 import sobre from '../styles/sobre.module.scss';
 import { NextPage } from 'next';
+import Footer from '../components/Footer';
 
 const metaData:MetaData = {
     title: 'Etec Ferrúcio Humberto Gazzetta',
@@ -33,6 +34,7 @@ const Sobre:NextPage = () => {
                         </div>
                     </div>
                 </Section>
+                <Footer/>
         </RootLayout>
     )
 }

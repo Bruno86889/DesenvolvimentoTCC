@@ -5,30 +5,35 @@
 @import 'components/footer.scss';
 @import 'components/main.scss';
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: font.$font-family;
 }
-html{
+
+html {
     width: 100vw;
 }
-body{
+
+body {
     width: 100vw;
     min-height: 100vh;
     overscroll-behavior: none;
-    font-size: font.$medium-font-size;
+    font-size: 10pt;
     overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    scroll-snap-align: center;
+    scroll-behavior: smooth;
 }
 
- ::-webkit-scrollbar{
+::-webkit-scrollbar {
     display: none;
- }
+}
 
- @media screen and (max-width: 400px){
+@media screen and (max-width: 400px) {
     body {
         width: 100vw;
         overscroll-behavior-y: auto;
     }
- }
+}

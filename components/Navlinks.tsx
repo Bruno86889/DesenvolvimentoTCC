@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { MediumText } from './Text'
+import { MediumText, SmallText } from './Text'
 
 export type NavLinkType = {
     url: string,
@@ -13,7 +13,7 @@ const Navlink = (props: NavLinkType)=>{
 
     return (
     <Link className={router.asPath === props.url ? 'navItem active' : 'navItem'} href={props.url}>
-        {props.text}
+        <SmallText text={props.text}/>
     </Link>
     )
 }

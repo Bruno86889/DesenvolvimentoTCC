@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Image from 'next/image';
-import { LargeText, SmallText } from './Text';
+import { LargeText, MediumText, SmallText } from './Text';
 import {NavLinks} from './Navlinks';
 
 import routes from '../data/routes';
@@ -16,8 +16,10 @@ const Navbar = ({ transparent = false }) => {
 
             <div className="text">
                 <LargeText text='etec fhg'/>
-                <SmallText text='Ferrúcio Humberto Gazzetta | Nova Odessa'/>
+                <SmallText text='Ferrúcio Humberto Gazzetta'/>
+                <SmallText text='Nova Odessa' />
             </div>
+            
             <div className="icon" onClick={()=>{
                 setActive(!active)
                 console.log(active)

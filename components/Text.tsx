@@ -1,40 +1,41 @@
 import React from 'react';
 
 interface TextProps {
-    text: string
+    text: string,
+     className?: string
 }
 
-const MainTitle = ({ text }: TextProps) => {
+const MainTitle = ({ text, className}: TextProps) => {
     return (
-        <h1>{text}</h1>
-    )
-}
-
-const SubTitle = ({ text }: TextProps) => {
-    return (
-        <h2>{text}</h2>
+        <h1 className={className}>{text}</h1>
     )
 }
 
-const SectionTitle = ({ text }: TextProps) => {
+const SubTitle = ({ text, className}: TextProps) => {
     return (
-        <h3>{text}</h3>
+        <h2 className={className}>{text}</h2>
     )
 }
 
-const SmallText = ({ text }: TextProps) => {
+const SectionTitle = ({ text, className }: TextProps) => {
     return (
-        <p className={'small'}>{text}</p>
+        <h3 className={className}>{text}</h3>
     )
 }
-const MediumText = ({ text }: TextProps) => {
+
+const SmallText = ({ text, className }: TextProps) => {
     return (
-        <p className={'medium'}>{text}</p>
+        <p className={'small ' + className}>{text}</p>
     )
 }
-const LargeText = ({ text }: TextProps) => {
+const MediumText = ({ text, className }: TextProps) => {
     return (
-        <p className={'large'}>{text}</p>
+        <p className={'medium ' + className}>{text}</p>
+    )
+}
+const LargeText = ({ text, className }: TextProps) => {
+    return (
+        <p className={'large ' + className}>{text}</p>
     )
 }
 export {

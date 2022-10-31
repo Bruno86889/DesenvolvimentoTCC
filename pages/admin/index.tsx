@@ -1,8 +1,8 @@
-import { Section } from '../components/Main'
+import { Section } from '../../components/Main'
 
 import React from 'react';
-import { Layout, MetaData } from '../components/Root';
-import { LargeText, MainTitle, MediumText, SectionTitle, SmallText, SubTitle } from '../components/Text';
+import { Layout, MetaData } from '../../components/Root';
+import { LargeText, MainTitle, MediumText, SectionTitle, SmallText, SubTitle } from '../../components/Text';
 
 
 const metaData: MetaData = {
@@ -12,8 +12,7 @@ const metaData: MetaData = {
     robots: ''
 }
 
-// TODO: pegar imagens do BD
-const Galeria = () => {
+const Login = () => {
     return (
         <Layout meta={metaData}>
             <Section>
@@ -29,4 +28,4 @@ const Galeria = () => {
     )
 }
 
-export default Galeria;
+export default Login;

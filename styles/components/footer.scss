@@ -6,6 +6,9 @@ footer{
     background-color: color.$color-3;
      bottom: 0;
      position: relative;
+     display: flex;
+     align-items: center;
+     justify-content: center;
     // &,*{
     //     border: 5px solid black;
     // }
@@ -17,6 +20,8 @@ footer{
 
         p{
             text-align: center;
+            align-items: center;
+            justify-content: center;
             color: color.$color-1;
             font-size: 10px;
         }
