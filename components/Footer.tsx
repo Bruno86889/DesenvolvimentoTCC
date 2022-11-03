@@ -6,17 +6,17 @@ const Footer = () => {
         <footer>
             <div className="text">
                 <SmallText
-                text='ETEC Ferrúcio Humberto Gazzetta'
+                text='2022. ETEC Ferrúcio Humberto Gazzetta'
                 />
                 <SmallText
-                text='Jardim da alvorada, Nova odessa, SP'
+                text='Av São Gonçalo, 2770 - Jardim da alvorada, Nova odessa, SP'
                 />
                 <SmallText 
-                text='(19) 3498-1709 (19) 3476-5074'
+                text='CEP 13460-000 - (19) 3498-1709 (19) 3476-5074'
                 />
-                <SmallText
+                {/* <SmallText
                 text='Copyright © 2021 ETEC FHG'
-                />
+                /> */}
             </div>
         </footer>
     )

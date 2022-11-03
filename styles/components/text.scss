@@ -17,10 +17,19 @@
 
 h1{
     @include font.title();
+    min-height: 2rem;
+    display: flex;
+    align-items: center;
 }
 h2{
     @include font.subtitle();
+    min-height: 2rem;
+    display: flex;
+    align-items: center;
 }
 h3{
     @include font.sectionTitle();
+    min-height: 2rem;
+    display: flex;
+    align-items: center;
 }

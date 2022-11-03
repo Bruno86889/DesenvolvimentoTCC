@@ -11,7 +11,7 @@ const Navbar = ({ transparent = false }) => {
     return (
         <nav className={transparent ? 'transparent' : '' + active ? ' active' : ''}>
             <div className="logo">
-                <Image  alt='logo' src={'/logo.svg'} width={70} height={65} style={{objectFit: "cover"}}/>
+                <Image  alt='logo' src={'/logo.svg'} width={70} height={65} style={{objectFit: "cover"}} priority/>
             </div>
 
             <div className="text">
@@ -20,7 +20,7 @@ const Navbar = ({ transparent = false }) => {
                 <SmallText text='Nova Odessa' />
             </div>
             
-            <div className="icon" onClick={()=>{
+            <div className={ active ? 'icon active' : 'icon'} onClick={()=>{
                 setActive(!active)
                 console.log(active)
             }}>

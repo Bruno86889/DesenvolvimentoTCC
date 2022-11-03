@@ -4,7 +4,7 @@ import { Section } from '../components/Main'
 import { MediumText, SmallText } from '../components/Text';
 import Image from 'next/image';
 import { MetaData, RootLayout } from '../components/Root';
-import sobre from '../styles/sobre.module.scss';
+import institucional from '../styles/institucional.module.scss';
 import { NextPage } from 'next';
 import Footer from '../components/Footer';
 
@@ -15,16 +15,16 @@ const metaData:MetaData = {
     robots:''
 }
 
-const Sobre:NextPage = () => {
+const Institucional:NextPage = () => {
     return (
         <RootLayout meta={metaData}>
             <Navbar transparent={true} />
-                <Section className={sobre.section} >
-                    <div className={sobre.backgroundImage}>
-                        <Image alt="" src='/etec2.svg' width={100} height={100}/>
+                <Section className={institucional.section} >
+                    <div className={institucional.backgroundImage}>
+                        <Image alt="" src='/etec2.svg' width={100} height={100} priority/>
                     </div>
-                    <div className={sobre.descriptionSquare}>
-                        <div className={sobre.textContainer}>
+                    <div className={institucional.descriptionSquare}>
+                        <div className={institucional.textContainer}>
                             <SmallText
                                 text='Com a abertura do mercado interno brasileiro, Nova Odessa passa a receber grandes corporações devido à sua localização estratégica, estando próxima às principais rodovias paulistas, infraestrutura e população com alto nível de instrução. O município de Nova Odessa se caracterizava de praticamente 90% da mão de obra voltada para o ramo da Indústria Têxtil. Com o decorrer dos anos, esse quadro vem se modificando, mantendo os níveis de emprego e gerando a vinda de novas empresas através de algumas particularidades, como localização, mananciais de água, rodovias próximas, mão de obra etc. Muitos desses recursos gerados pela própria administração.'
                             />
@@ -39,4 +39,4 @@ const Sobre:NextPage = () => {
     )
 }
 
-export default Sobre;
+export default Institucional;

@@ -19,9 +19,7 @@ export const RootLayout = ({ children, meta }: { children: JSX.Element | JSX.Ele
             <meta name="keywords" content={meta.keywords} />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <meta name="robots" content={meta.robots} />
-            <link rel="preconnect" href="https://fonts.googleapis.com" />
-            <link rel="preconnect" href="https://fonts.gstatic.com" />
-            <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet" />
+            
             <link rel="icon" href="/logo.svg" type="image/x-icon" />
 
             <title>{meta.title}</title>

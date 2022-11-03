@@ -2,7 +2,7 @@
 @use '../variables/screen.scss' as screen;
 
 footer{
-    @include screen.grid-size(1.5,16);
+    @include screen.grid-size(2,16);
     background-color: color.$color-3;
      bottom: 0;
      position: relative;

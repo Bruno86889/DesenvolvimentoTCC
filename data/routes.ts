@@ -6,8 +6,8 @@ const routes:NavListLinks = [
         text: 'home'
     },
     {
-        url: '/sobre',
-        text: 'sobre'
+        url: '/institucional',
+        text: 'institucional'
     },
     {
         url: '/tutorial',
@@ -25,6 +25,10 @@ const routes:NavListLinks = [
         url: '/cursos',
         text: 'cursos'
     },
+    {
+        url: '/contato',
+        text: 'contato'
+    }
 ]
 
 export default routes;
