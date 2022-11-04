@@ -1,12 +1,12 @@
 import React from 'react';
-import Navbar from '../components/Navbar'
-import { Section } from '../components/Main'
-import { MediumText, SmallText } from '../components/Text';
+import Navbar from '../components/navbar'
+import { Section } from '../components/section'
+import { MediumText, SmallText } from '../components/text';
 import Image from 'next/image';
-import { MetaData, RootLayout } from '../components/Root';
+import { MetaData, RootLayout } from '../components/root';
 import institucional from '../styles/institucional.module.scss';
 import { NextPage } from 'next';
-import Footer from '../components/Footer';
+import Footer from '../components/footer';
 
 const metaData:MetaData = {
     title: 'Etec Ferrúcio Humberto Gazzetta',

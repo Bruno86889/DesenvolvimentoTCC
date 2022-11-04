@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { MediumText, SmallText } from './Text'
+import { MediumText, SmallText } from './text'
 
 export type NavLinkType = {
     url: string,

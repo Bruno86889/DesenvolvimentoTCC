@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import {SectionTitle, SmallText} from './Text';
+import {SectionTitle, SmallText} from './text';
 import tutorial from '../styles/tutorial.module.scss';
 
 export interface TutorialItems{

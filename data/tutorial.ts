@@ -1,4 +1,4 @@
-import {TutorialItems,TutorialSectionList,TutorialList} from '../components/TutorialSection'
+import {TutorialItems,TutorialSectionList,TutorialList} from '../components/tutorialSection'
 
 const servicos:TutorialList = [
     {

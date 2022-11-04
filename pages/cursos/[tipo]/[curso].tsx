@@ -1,10 +1,10 @@
 // TODO: rota dinamica do curso
 
-import { Section } from '../../../components/Main'
+import { Section } from '../../../components/section'
 
 import React from 'react';
-import { Layout, MetaData } from '../../../components/Root';
-import { MediumText } from '../../../components/Text';
+import { Layout, MetaData } from '../../../components/root';
+import { MediumText } from '../../../components/text';
 
 
 

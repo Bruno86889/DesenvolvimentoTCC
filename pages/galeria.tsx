@@ -1,8 +1,9 @@
-import { Section } from '../components/Main'
+import { Section } from '../components/section'
 
 import React from 'react';
-import { Layout, MetaData } from '../components/Root';
-import { LargeText, MainTitle, MediumText, SectionTitle, SmallText, SubTitle } from '../components/Text';
+import { Layout, MetaData } from '../components/root';
+import { LargeText, MainTitle, MediumText, SectionTitle, SmallText, SubTitle } from '../components/text';
+import Loading from '../components/Loading';
 
 
 const metaData: MetaData = {
@@ -24,6 +25,7 @@ const Galeria = () => {
                 <MainTitle text='MainTitle'/>
                 <SubTitle text='SubTitle'/>
                 <SectionTitle text='SectionTitle'/>
+                <Loading/>
             </Section>
         </Layout>
     )

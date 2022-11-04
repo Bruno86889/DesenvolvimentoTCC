@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
-import { Layout, MetaData } from '../components/Root'
-import { LargeText } from '../components/Text'
-import { Section } from '../components/Main'
+import { Layout, MetaData } from '../components/root'
+import { LargeText } from '../components/text'
+import { Section } from '../components/section'
 
 const metaData:MetaData = {
   title: 'Página não encontrada',

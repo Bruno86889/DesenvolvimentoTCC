@@ -1,8 +1,8 @@
-import { LargeText, MainTitle, MediumText, SmallText } from "./Text";
+import { LargeText, MainTitle, MediumText, SmallText } from "./text";
 import Image from "next/image";
 import Link from "next/link";
 import cursos from "../styles/cursos.module.scss";
-import { Section } from "./Main";
+import { Section } from "./section";
 
 export interface CardCursoData {
     nome: string,

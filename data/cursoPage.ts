@@ -1,4 +1,4 @@
-import { CursoPageData } from "../components/CursoSection"
+import { CursoPageData } from "../components/cursoSection";
 
 export const etim: CursoPageData =
 {

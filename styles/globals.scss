@@ -4,12 +4,21 @@
 @import 'components/navbar.scss';
 @import 'components/footer.scss';
 @import 'components/main.scss';
+@import 'components/animations.scss';
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: font.$font-family;
+}
+
+.loading{
+    background-color: yellow;
+    height: 60px;
+    width: 60px;
+
+    animation: loading 2s infinite;
 }
 
 html {

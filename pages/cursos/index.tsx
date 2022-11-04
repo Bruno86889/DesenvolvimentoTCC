@@ -2,9 +2,9 @@
 
 import React from 'react';
 
-import { Section } from '../../components/Main'
-import { Layout, MetaData } from '../../components/Root';
-import CursoPageSection from '../../components/CursoSection';
+import { Section } from '../../components/section'
+import { Layout, MetaData } from '../../components/root';
+import CursoPageSection from '../../components/cursoSection';
 import {etim,modular} from '../../data/cursoPage';
 
 const metaData:MetaData = {

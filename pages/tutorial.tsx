@@ -1,12 +1,12 @@
 import React from "react"
-import { Section } from "../components/Main"
-import { TutorialSection } from "../components/TutorialSection"
+import { Section } from "../components/section"
+import { TutorialSection } from "../components/tutorialSection"
 
-import type { TutorialSectionData } from '../components/TutorialSection';
+import type { TutorialSectionData } from '../components/tutorialSection';
 
 //TODO: dados serão pegos do BD
 import { tutoriais } from "../data/tutorial"
-import { Layout, MetaData } from "../components/Root"
+import { Layout, MetaData } from "../components/root"
 
 const metaData: MetaData = {
     title: 'Plataformas e Tutoriais',

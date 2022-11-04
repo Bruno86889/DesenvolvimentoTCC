@@ -1,5 +1,5 @@
-import Navbar from './Navbar';
-import Footer from './Footer'
+import Navbar from './navbar';
+import Footer from './footer'
 import React from 'react';
 import Head from 'next/head';
 
@@ -34,11 +34,11 @@ export const RootLayout = ({ children, meta }: { children: JSX.Element | JSX.Ele
 export const Layout = ({ children, meta }: { children: JSX.Element | JSX.Element[], meta: MetaData }) => {
     return (
         <RootLayout meta={meta}>
-            <Navbar />
             <main>
+            <Navbar />
                 {children}
-            </main>
             <Footer />
+            </main>
         </RootLayout>
     )
 }

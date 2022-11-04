@@ -1,10 +1,9 @@
 import React, { ReactElement } from 'react';
-import { Section } from '../components/Main'
-import { Feed } from '../components/Feed';
-import { Layout, MetaData, RootLayout } from '../components/Root';
+import { Section } from '../components/section'
+import { Feed } from '../components/feed';
+import { Layout, MetaData, RootLayout } from '../components/root';
 import { NextPage } from 'next';
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar';
+
 const metaData:MetaData = {
     title: 'Eventos e documentos',
     description: '',

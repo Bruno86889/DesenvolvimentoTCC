@@ -1,4 +1,4 @@
-import { NavListLinks } from '../components/Navlinks';
+import { NavListLinks } from '../components/navlinks';
 
 const routes:NavListLinks = [
     {

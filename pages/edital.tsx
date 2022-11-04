@@ -1,8 +1,8 @@
-import {Section } from '../components/Main'
+import {Section } from '../components/section'
 
 import React from 'react';
-import { Layout, MetaData } from '../components/Root';
-import { LargeText } from '../components/Text';
+import { Layout, MetaData } from '../components/root';
+import { LargeText } from '../components/text';
 
 const metaData:MetaData = {
     title: 'Editais',
