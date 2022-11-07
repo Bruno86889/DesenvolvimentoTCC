@@ -1,21 +1,27 @@
-import {Section } from '../components/section'
+import { Section } from '../components/section'
 
 import React from 'react';
 import { Layout, MetaData } from '../components/root';
-import { LargeText } from '../components/text';
+import { LargeText, SmallText } from '../components/text';
+import { Feed } from '../components/feed';
 
-const metaData:MetaData = {
+
+import Image from 'next/image';
+import institucional from '../styles/institucional.module.scss';
+
+
+const metaData: MetaData = {
     title: 'Editais',
     description: '',
-    keywords:'',
-    robots:''
+    keywords: '',
+    robots: ''
 }
 
 const Edital = () => {
     return (
         <Layout meta={metaData}>
             <Section>
-                <LargeText text='Editais vão aqui'/>
+                
             </Section>
         </Layout>
     )

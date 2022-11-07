@@ -17,7 +17,6 @@ nav {
     position: sticky;
     top: 0;
     background-color: color.$color-2;
-    z-index: 100;
     display: grid;
     grid-template-columns: 1fr 1fr;
     // flex-wrap: wrap;
@@ -123,6 +122,9 @@ nav {
 // }
 
 @media screen and (min-width:500px) {
+    nav{
+        flex-wrap: wrap;
+    }
     .text {
         p:nth-child(2) {
             width: max-content;
@@ -142,7 +144,7 @@ nav {
 
         .content {
             display: grid;
-            grid-template-columns: 1fr 1fr .8fr;
+            grid-template-columns: 1fr 1.5fr .5fr;
             grid-template-areas: "logo text icon";
             align-items: center;
             justify-content: center;
@@ -152,6 +154,8 @@ nav {
                 grid-area: logo;
                 margin: 0;
                 height: 100%;
+                justify-content: right;
+                margin-right: 16px;
             }
 
             .text {

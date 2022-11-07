@@ -1,4 +1,6 @@
 @use '../variables/font' as font;
+@use '../variables/screen' as screen;
+
 
 .small{
     @include font.small-text();
@@ -20,16 +22,26 @@ h1{
     min-height: 2rem;
     display: flex;
     align-items: center;
+    min-height: 32px;
 }
 h2{
     @include font.subtitle();
     min-height: 2rem;
     display: flex;
     align-items: center;
+    min-height: 32px;
 }
 h3{
     @include font.sectionTitle();
     min-height: 2rem;
     display: flex;
     align-items: center;
+    min-height: 32px;
+}
+
+.bold{
+    font-weight: 600;
+}
+.lighter {
+    font-weight: lighter;
 }

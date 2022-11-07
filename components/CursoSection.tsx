@@ -28,7 +28,7 @@ const CursoPageSection = (props:{data:CursoPageData})=>{
     return (
         <Section className={cursos.cursoPageSection}>
                 <MainTitle text={props.data.tipoDeCurso}/>
-                <SmallText text={props.data.descricao}/>
+                <MediumText text={props.data.descricao}/>
                 <CursoSection cursos={props.data.cursos} />
         </Section>
     )

@@ -5,7 +5,7 @@ import React from 'react';
 import { Section } from '../../components/section'
 import { Layout, MetaData } from '../../components/root';
 import CursoPageSection from '../../components/cursoSection';
-import {etim,modular} from '../../data/cursoPage';
+import {etim,modular,novoTec} from '../../data/cursoPage';
 
 const metaData:MetaData = {
     title: 'Modalidades e Cursos',
@@ -28,7 +28,7 @@ const Curso = (props:{cursoPageSectionData:[]}) => {
 
 export async function getStaticProps(){
     return {
-        props:{cursoPageSectionData:[etim,modular]}
+        props:{cursoPageSectionData:[etim,modular,novoTec]}
     }
 }
 export default Curso;

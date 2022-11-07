@@ -13,14 +13,14 @@
         display: grid;
         img{
             width: 100%;
-            height: calc(math.div(100vh,16) * 8);
+            height: calc(math.div(100vh,16) * 9);
             object-fit: cover;    
         }
     }
     
     .descriptionSquare {
         background-color: color.$color-2;
-        min-height: calc(math.div(100vh,16) * 6);
+        min-height: calc(math.div(100vh,16) * 5);
         
         .textContainer {
             display: flex;

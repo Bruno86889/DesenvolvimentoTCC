@@ -1,5 +1,4 @@
 import { CursoPageData } from "../components/cursoSection";
-
 export const etim: CursoPageData =
 {
     tipoDeCurso: "Ensino Técnico Integrado Ao Ensino Médio (ETIM)",
@@ -26,6 +25,25 @@ export const etim: CursoPageData =
     ]
 }
 
+export const novoTec: CursoPageData =  {
+    tipoDeCurso: "NovoTEC",
+    descricao: "Lorem Ipsum Dolor Sit Atem",
+    cursos: [
+        {
+            nome: "Recursos Humanos",
+            description: "",
+            img: "/etec1.svg",
+            page: "/cursos/novotec/recursos-humanos"
+        },
+        {
+            nome: "Linguagens, Humanas e Ciências Sociais",
+            description: "",
+            img: "/etec1.svg",
+            page: "/cursos/novotec/linguagens-humanas"
+        }
+    ]
+}
+
 export const modular: CursoPageData = {
     tipoDeCurso: "Ensino Técnico Modular",
     descricao: 'Os cursos da modalidade Técnico Modular presenciais são compostos de três ou quatro módulos semestrais que, ao serem concluídos, rendem ao estudante além do diploma, o direito de exercer a habilitação profissional de nível técnico.',
@@ -34,13 +52,13 @@ export const modular: CursoPageData = {
             nome: 'Administração',
             description: 'O Técnico em Adminstração pode atuar em departamentos como compra, produção, vendasm recursos humano, marketing ou qualuqer outra área, podendo atender clientes e fornecedores.',
             img:'/etec1.svg',
-            page: '/cursos/modular/adminstracao'
+            page: '/cursos/modular/administracao'
         },
         {
             nome: "Informática",
             description:"O Técnico em Informática é o profissional que além de fornecer suporte de informática a usuários, poderá atuar com Gerenciamento de Sistemas Operacionais, Segurança Digital, Redes de comunicação de dados.",
             img:"/etec1.svg",
-            page:"/cursos/modular/informática"
+            page:"/cursos/modular/informatica"
         },
         {
             nome:"Logística",

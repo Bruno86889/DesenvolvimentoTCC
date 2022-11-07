@@ -10,20 +10,20 @@ const routes:NavListLinks = [
         text: 'institucional'
     },
     {
-        url: '/tutorial',
-        text: 'tutorial'
+        url: '/estudante',
+        text: 'estudante'
+    },
+    // {
+    //     url: '/galeria',
+    //     text: 'galeria'
+    // },
+    {
+        url: '/cursos',
+        text: 'cursos'
     },
     {
         url: '/edital',
         text: 'edital'
-    },
-    {
-        url: '/galeria',
-        text: 'galeria'
-    },
-    {
-        url: '/cursos',
-        text: 'cursos'
     },
     {
         url: '/contato',

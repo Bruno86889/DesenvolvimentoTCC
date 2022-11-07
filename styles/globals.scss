@@ -1,10 +1,10 @@
 @use "variables/font.scss" as font;
 
-@import 'components/text.scss';
 @import 'components/navbar.scss';
 @import 'components/footer.scss';
 @import 'components/main.scss';
 @import 'components/animations.scss';
+@import 'components/text.scss';
 
 * {
     margin: 0;

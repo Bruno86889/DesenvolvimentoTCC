@@ -2,9 +2,7 @@ import { Section } from '../components/section'
 
 import React from 'react';
 import { Layout, MetaData } from '../components/root';
-import { LargeText, MainTitle, MediumText, SectionTitle, SmallText, SubTitle } from '../components/text';
-import Loading from '../components/Loading';
-
+import Galeria from '../components/galeria';
 
 const metaData: MetaData = {
     title: 'Fotos da escola',
@@ -14,21 +12,14 @@ const metaData: MetaData = {
 }
 
 // TODO: pegar imagens do BD
-const Galeria = () => {
+const GaleriaPage = () => {
     return (
         <Layout meta={metaData}>
             <Section>
-                <SmallText text='SmallText'/>
-                <MediumText text='MediumText'/>
-                <LargeText text='LargeText'/>
-
-                <MainTitle text='MainTitle'/>
-                <SubTitle text='SubTitle'/>
-                <SectionTitle text='SectionTitle'/>
-                <Loading/>
+                <Galeria />
             </Section>
         </Layout>
     )
 }
 
-export default Galeria;
+export default GaleriaPage;
