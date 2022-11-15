@@ -1,75 +1,58 @@
 @use "color" as color;
 
-// $small-font-size: 12pt;
-// $medium-font-size: 14pt;
-// $large-font-size: 16pt;
+$small-font-size: .75em;
+$medium-font-size: 1em;
+$large-font-size: 1.25em;
 
-// $section-font-size: 18pt;
-// $subtitle-font-size: 22pt;
-// $title-font-size: 28pt;
+$section-font-size: 1.25em;
+$subtitle-font-size: 1.5em;
+$title-font-size: 1.75em;
 
-$small-font-size: 1em;
-$medium-font-size: 1.5em;
-$large-font-size: 1.75em;
+// $small-font-size: 1em;
+// $medium-font-size: 1.5em;
+// $large-font-size: 1.75em;
 
-$section-font-size: 1.75em;
-$subtitle-font-size: 2em;
-$title-font-size: 2em;
+// $section-font-size: 1.75em;
+// $subtitle-font-size: 2em;
+// $title-font-size: 2em;
 
 $font-family: 'Noto Sans',sans-serif;
 
 @mixin small-text ($color: color.$color-4) {
     font-size: $small-font-size;
-    line-height: 16px;
-    display: flex;
-    align-items: center;
     color: $color;
-    font-style: normal;
-    line-height: 19px;
-
     font-family: $font-family;
-    display: flex;
-    align-items: center;
 }
 
 @mixin medium-text ($color: color.$color-4) {
     font-size: $medium-font-size;
-    // line-height: 19px;
-    display: flex;
-    align-items: center;
     color: $color;
     font-family: $font-family;
 }
 
 @mixin large-text ($color: color.$color-4) {
     font-size: $large-font-size;
-    line-height: 22px;
-    display: flex;
-    align-items: center;
     color: $color;
     font-family: $font-family;
 }
 
 @mixin title($color: color.$color-4) {
-    font-weight: 700;
+    font-weight: bold;
     font-size: $title-font-size;
-    line-height: 44px;
     text-transform: uppercase;
     color: $color;
     font-family: $font-family;
 }
 
 @mixin subtitle($color: color.$color-4) {
-    font-weight: 700;
+    font-weight: bold;
     font-size: $subtitle-font-size;
-    line-height: 33px;
     color: $color;
     font-family: $font-family;
 }
 
 @mixin sectionTitle($color: color.$color-4) {
-    font-weight: 700;
+    font-weight: bold;
     font-size: $section-font-size;
-    line-height: 27px;
     font-family: $font-family;
 }

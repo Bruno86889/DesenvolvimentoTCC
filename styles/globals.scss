@@ -5,20 +5,14 @@
 @import 'components/main.scss';
 @import 'components/animations.scss';
 @import 'components/text.scss';
+@import 'components/blog.scss';
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: font.$font-family;
-}
-
-.loading{
-    background-color: yellow;
-    height: 60px;
-    width: 60px;
-
-    animation: loading 2s infinite;
+    // border: 1px solid black;
 }
 
 html {
@@ -29,7 +23,7 @@ body {
     width: 100vw;
     min-height: 100vh;
     overscroll-behavior: none;
-    font-size: 12px;
+    font-size: 18px;
     overflow-x: hidden;
     scroll-snap-type: y mandatory;
     scroll-snap-align: center;
@@ -38,6 +32,11 @@ body {
 
 ::-webkit-scrollbar {
     display: none;
+}
+
+li{
+    font-size: font.$medium-font-size;
+    list-style: square;
 }
 
 @media screen and (max-width: 400px) {

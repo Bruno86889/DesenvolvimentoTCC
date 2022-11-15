@@ -1,18 +1,13 @@
 @use '../variables/screen.scss' as screen;
 @use '../variables/color.scss' as color;
 
-main{
-    scroll-snap-type: y mandatory;
-    scroll-snap-align: center;
-    scroll-behavior: smooth;
-}
 section {
     @include screen.grid-size(14,16);
     display: flex;
     align-items: center;
     flex-direction: column;
     scroll-snap-type: y mandatory;
-    scroll-snap-align: center;
+    scroll-snap-align: end;
     scroll-behavior: smooth;
     background-color: color.$color-6;
 }

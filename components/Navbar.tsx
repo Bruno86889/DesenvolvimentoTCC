@@ -1,15 +1,29 @@
-import React, { useState } from 'react'
+import React, { useEffect, useLayoutEffect, useState } from 'react'
 import Image from 'next/image';
-import { LargeText, MediumText, SmallText } from './text';
+
+import { LargeText, SmallText } from './text';
 import { NavLinks } from './navlinks';
 
-import routes from '../data/routes';
+import routes from '@/data/routes';
 
-const Navbar = ({ transparent = false }) => {
+const Navbar = () => {
     const [active, setActive] = useState(false)
+    const [scrolled, setScrolled] = useState(false)
+
+    useEffect(() => {
+        const scroll = () => {
+            if (window.scrollY < 20) {
+                setScrolled(false)
+            }
+            if (window.scrollY >= 100) {
+                setScrolled(true)
+            }
+        }
+        window.addEventListener("scroll", scroll)
+    }, [])
 
     return (
-        <nav className={transparent ? 'transparent' : '' + active ? ' active' : ''}>
+        <nav className={scrolled ? 'scrolled' : '' + active ? ' active' : ''}>
             <div className="content">
                 <div className="logo">
                     <Image alt='logo' src={'/logo.svg'} width={70} height={65} style={{ objectFit: "cover" }} priority />

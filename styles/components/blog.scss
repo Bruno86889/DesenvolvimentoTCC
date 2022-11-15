@@ -1,0 +1,24 @@
+@use '../variables/color.scss'as color;
+
+.blog-container {
+    width: 90vw;
+    min-height: 100%;
+    line-height: 32px;
+
+    h2 {
+        font-weight: 200;
+    }
+
+    li {
+        list-style-position: inside;
+        list-style-type: square;
+    }
+
+    a {
+        color: color.$color-2;
+    }
+
+    p {
+        text-indent: 16px;
+    }
+}

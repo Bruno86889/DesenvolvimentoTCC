@@ -1,7 +1,7 @@
-import React, { ReactElement } from 'react';
-import { Section } from '../components/section'
-import Feed  from '../components/feed';
-import { Layout, MetaData } from '../components/root';
+import React from 'react';
+import { Section } from '@/components/section'
+import Feed  from '@/components/feed';
+import { Layout } from '@/components/root';
 import { NextPage } from 'next';
 
 const metaData: MetaData = {

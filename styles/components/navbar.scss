@@ -5,30 +5,19 @@
 $logo-width: 75px;
 $logo-height: 60px;
 
-
 nav {
-
-    // &,
-    // * {
-    //     border: 1px solid black;
-    // }
-
     @include screen.grid-size(2, 16);
     position: sticky;
     top: 0;
     background-color: color.$color-2;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    // flex-wrap: wrap;
-    // align-items: center;
-    // justify-content: center;
     box-shadow: 0px 4px 8px -2px rgba(color.$color-3, .3);
-
+    transition: .5s;
     .content {
         display: flex;
 
         .logo {
-
             display: flex;
             align-items: center;
             justify-content: center;
@@ -71,14 +60,13 @@ nav {
     .nav-wrap {
         width: 100%;
         display: flex;
-        justify-content: right;
+        justify-content: center;
 
         .navLinks {
             height: 100%;
             display: flex;
             align-items: center;
             flex-direction: row;
-            border-color: blue;
             justify-content: center;
 
             .navItem {
@@ -99,32 +87,25 @@ nav {
         }
 
     }
+
+    &.scrolled {
+        @include screen.grid-size(1.5, 16);
+
+        .text {
+            width: max-content;
+            p:nth-child(2),
+            p:nth-child(3) {
+                display: none;
+            }
+        }
+    }
 }
 
-// nav.transparent {
-//     background-color: transparent;
-//     box-shadow: none;
-//     position: absolute;
-
-//     .text {
-//         background: transparent;
-//         color: white;
-//         p {
-//             color: color.$color-4;
-//         }
-//     }
-
-//     .navLinks {
-//         .navItem {
-//             color: color.$color-4;
-//         }
-//     }
-// }
-
 @media screen and (min-width:500px) {
-    nav{
+    nav {
         flex-wrap: wrap;
     }
+
     .text {
         p:nth-child(2) {
             width: max-content;
@@ -132,7 +113,7 @@ nav {
     }
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:900px) {
     nav {
         @include screen.grid-size(1, 8, 8, 8);
         display: grid;

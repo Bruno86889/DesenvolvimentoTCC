@@ -1,27 +1,28 @@
-@use 'sass:math' as math;
-@use 'variables/color.scss' as color;
-@use 'variables/screen.scss' as screen;
-@use 'variables/font.scss' as font;
+@use 'sass:math'as math;
+@use 'variables/color.scss'as color;
+@use 'variables/screen.scss'as screen;
+@use 'variables/font.scss'as font;
 
 
-.section{
+.section {
     align-items: baseline;
     justify-items: baseline;
 
-    .backgroundImage{
+    .backgroundImage {
         width: 100vw;
         display: grid;
-        img{
+
+        img {
             width: 100%;
-            height: calc(math.div(100vh,16) * 9);
-            object-fit: cover;    
+            height: calc(math.div(100vh, 16) * 9);
+            object-fit: cover;
         }
     }
-    
+
     .descriptionSquare {
         background-color: color.$color-2;
-        min-height: calc(math.div(100vh,16) * 5);
-        
+        min-height: calc(math.div(100vh, 16) * 5);
+
         .textContainer {
             display: flex;
             align-items: center;
@@ -29,10 +30,15 @@
             flex-direction: column;
             padding: 8px 32px;
 
-            p{
+            p {
+                // text-align: justify;
+                // text-indent: 1.5em;
+                // line-height: 1.5rem;
                 text-align: justify;
-                text-indent: 1.5em;
+                word-break: normal;
                 line-height: 1.5rem;
+                text-indent: 2rem;
+                text-justify: auto;
                 color: color.$color-1;
             }
         }
@@ -40,12 +46,13 @@
 
 }
 
-@media screen and (max-width:400px){
-    .section{
-        .backgroundImage{
-            @include screen.grid-size(6,8,8,8);
+@media screen and (max-width:400px) {
+    .section {
+        .backgroundImage {
+            @include screen.grid-size(6, 8, 8, 8);
         }
-        .descriptionSquare{
+
+        .descriptionSquare {
             height: max-content;
         }
     }

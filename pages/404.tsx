@@ -1,13 +1,15 @@
+import React from 'react';
 import type { NextPage } from 'next'
-import { Layout, MetaData } from '../components/root'
-import { LargeText } from '../components/text'
-import { Section } from '../components/section'
+
+import { Layout } from '@/components/root'
+import { LargeText } from '@/components/text'
+import { Section } from '@/components/section'
 
 const metaData:MetaData = {
   title: 'Página não encontrada',
   description: '',
   keywords:'',
-  robots:'noIndex'
+  robots:'noIndex',
 }
 
 const Page404: NextPage = () => {

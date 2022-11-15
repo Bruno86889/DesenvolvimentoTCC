@@ -1,40 +1,21 @@
 import { LargeText, MainTitle, MediumText, SmallText } from "./text";
 import Image from "next/image";
 import Link from "next/link";
-import cursos from "../styles/cursos.module.scss";
+import cursos from "@/styles/cursos.module.scss";
 import { Section } from "./section";
-
-export interface CardCursoData {
-    nome: string,
-    img: string,
-    description: string,
-    page: string
-}
-
-export type CardCursoDataList = {
-    cursos:CardCursoData[]
-}
-
-export type CursoPageData = {
-    tipoDeCurso: string,
-    descricao: string,
-    cursos: CardCursoData[]
-}
-
-export type CursoPageDataList = CursoPageData[]
 
 
 const CursoPageSection = (props:{data:CursoPageData})=>{
     return (
         <Section className={cursos.cursoPageSection}>
                 <MainTitle text={props.data.tipoDeCurso}/>
-                <MediumText text={props.data.descricao}/>
+                <MediumText className="longText" text={props.data.descricao}/>
                 <CursoSection cursos={props.data.cursos} />
         </Section>
     )
 }
 
-const CursoSection =(props:CardCursoDataList)=>{
+const CursoSection =(props:{cursos: CardCursoData[]})=>{
     return (
         <div className={cursos.cursoSection}>
             {props.cursos.map((curso,i)=>{

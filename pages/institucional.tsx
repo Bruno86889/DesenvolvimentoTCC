@@ -1,21 +1,23 @@
 import React from 'react';
-import Navbar from '../components/navbar'
-import { Section } from '../components/section'
-import { MediumText, SmallText } from '../components/text';
-import Image from 'next/image';
-import { MetaData, RootLayout } from '../components/root';
-import institucional from '../styles/institucional.module.scss';
 import { NextPage } from 'next';
-import Footer from '../components/footer';
-import Feed from '../components/feed';
-import Galeria from '../components/galeria';
+import Image from 'next/image';
+
+import Navbar from '@/components/navbar';;
+import { Section } from '@/components/section';
+import { SmallText } from '@/components/text';
+import { RootLayout } from '@/components/root';
+
+import Footer from '@/components/footer';
+import Galeria from '@/components/galeria';
+
+import institucional from '@/styles/institucional.module.scss';
 
 const metaData: MetaData = {
     title: 'Etec Ferrúcio Humberto Gazzetta',
     description: '',
     keywords: '',
-    robots: ''
-}
+    robots: '',
+};
 
 const Institucional: NextPage = () => {
     return (

@@ -1,15 +1,4 @@
-type CursoData = {
-    nome: string,
-    descricao:string,
-    periodo: string,
-    vagas: number,
-    duracao: string,
-    eixoTecnologico: string,
-    mercadoDeTrabalho: string,
-    tipoDeCurso: string,
-    ativo: boolean,
-    path: string
-}
+
 
 const etimADM:CursoData = {
     nome: "Administração",

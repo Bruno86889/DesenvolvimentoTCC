@@ -1,39 +1,37 @@
 // TODO: rota dinamica do curso
 
-import { Section } from '../../../components/section'
+import { Section } from '@/components/section';
 
 import React, { useEffect, useState } from 'react';
-import { Layout, MetaData } from '../../../components/root';
-import { cursos } from '../../../data/cursosData';
-import { MainTitle, MediumText } from '../../../components/text';
+import { Layout } from '@/components/root';
+import { cursos } from '@/data/cursosData';
+import { MainTitle, MediumText } from '@/components/text';
 
-const metaData:MetaData = {
+const metaData: MetaData = {
     title: 'Cursos',
     description: '',
-    keywords:'',
-    robots:'index'
+    keywords: '',
+    robots: 'index'
 }
 
-const Curso = (props:{curso:CursoData}) => {
-
-    useEffect(()=>{console.log(props.curso)},[])
+const Curso = (props: { curso: CursoData }) => {
     return (
         <Layout meta={metaData}>
             <Section>
-               <MainTitle text={props.curso.nome}/>
-               <MediumText text={props.curso.descricao}/>
-               <ul>
-                <li>Eixo Tecnológico: {props.curso.eixoTecnologico}</li>
-                <li>Mercado de Trabalho: {props.curso.mercadoDeTrabalho}</li>
-                <li>Período: {props.curso.periodo}</li>
-                <li>Tipo de Curso:{props.curso.tipoDeCurso}</li>
-               </ul>
+                <MainTitle text={props.curso.nome} />
+                <MediumText text={props.curso.descricao} />
+                <ul>
+                    <li>Eixo Tecnológico: {props.curso.eixoTecnologico}</li>
+                    <li>Mercado de Trabalho: {props.curso.mercadoDeTrabalho}</li>
+                    <li>Período: {props.curso.periodo}</li>
+                    <li>Tipo de Curso:{props.curso.tipoDeCurso}</li>
+                </ul>
             </Section>
         </Layout>
     )
 }
 
-export async function getStaticPaths(){
+export async function getStaticPaths() {
     const data = getCursos(cursos)
 
     return {
@@ -42,25 +40,24 @@ export async function getStaticPaths(){
     }
 }
 
-export async function getStaticProps({params}:any){
+export async function getStaticProps({ params }: any) {
 
-    const data:CursoData | undefined = cursos.find((val)=>{
-        if(val.tipoDeCurso === params.tipo){
-            if(val.path === params.curso){
+    const data: CursoData | undefined = cursos.find((val:any) => {
+        if (val.tipoDeCurso === params.tipo) {
+            if (val.path === params.curso) {
                 return true
             }
         }
     })
-    console.info(data,params)
+
     return {
-        props: {curso: data}
+        props: { curso: data }
     }
 }
-export default Curso;
 
 type CursoData = {
     nome: string,
-    descricao:string,
+    descricao: string,
     periodo: string,
     vagas: number,
     duracao: string,
@@ -71,10 +68,17 @@ type CursoData = {
     path: string
 }
 
-function getCursos(cursosList:CursoData[]){
+function getCursos(cursosList: CursoData[]) {
     const map = cursosList.map(curso => {
-        const params = {params:{curso:curso.path,tipo:curso.tipoDeCurso}}
-        return params
+        const params = {
+            params: {
+                curso: curso.path,
+                tipo: curso.tipoDeCurso
+            }
+        };
+        return params;
     })
-    return map
+    return map;
 }
+
+export default Curso;

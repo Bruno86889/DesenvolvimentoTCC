@@ -1,8 +1,8 @@
-import { Section } from '../components/section'
-
 import React from 'react';
-import { Layout, MetaData } from '../components/root';
-import Galeria from '../components/galeria';
+
+import Galeria from '@/components/galeria';
+import { Section } from '@/components/section'
+import { Layout } from '@/components/root';
 
 const metaData: MetaData = {
     title: 'Fotos da escola',
@@ -11,7 +11,6 @@ const metaData: MetaData = {
     robots: ''
 }
 
-// TODO: pegar imagens do BD
 const GaleriaPage = () => {
     return (
         <Layout meta={metaData}>
