@@ -1,29 +1,36 @@
 @use '../variables/color.scss' as color;
 @use '../variables/screen.scss' as screen;
 
-footer{
-    @include screen.grid-size(2,16);
+footer {
+    @include screen.grid-size(2, 16);
     background-color: color.$color-3;
-     bottom: 0;
-     position: relative;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-    // &,*{
-    //     border: 5px solid black;
-    // }
-    .text{
+    bottom: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    .text {
         text-align: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
 
-        p{
+        p {
             text-align: center;
             align-items: center;
             justify-content: center;
             color: color.$color-1;
             font-size: 10px;
+        }
+    }
+    .socialMedia{
+        width: 80px;
+        display: flex;
+        justify-content: space-between;
+        a{
+            color: white;
         }
     }
 }

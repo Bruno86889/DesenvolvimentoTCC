@@ -11,6 +11,7 @@ import Footer from '@/components/footer';
 import Galeria from '@/components/galeria';
 
 import institucional from '@/styles/institucional.module.scss';
+import Feed from '@/components/feed';
 
 const metaData: MetaData = {
     title: 'Etec Ferrúcio Humberto Gazzetta',
@@ -22,7 +23,7 @@ const metaData: MetaData = {
 const Institucional: NextPage = () => {
     return (
         <RootLayout meta={metaData}>
-            <Navbar transparent={true} />
+            <Navbar/>
             <Section className={institucional.section} >
                 <div className={institucional.backgroundImage}>
                     <Image alt="" src='/etec2.svg' width={100} height={100} priority />

@@ -17,6 +17,7 @@ const News: NextPage = () => {
             <Section>
                 <Feed />
             </Section>
+            
         </Layout>
     )
 }

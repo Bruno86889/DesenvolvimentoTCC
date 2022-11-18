@@ -11,6 +11,10 @@
     display: flex;
     flex-direction: column;
     width: $scroll-container-width;
+
+    *,&{
+        border: 1px solid black;
+    }
     .tutorialCarousel {
         padding: 8px;
         // width: $scroll-container-width;
@@ -81,7 +85,7 @@
     }
 }
 
-@media screen and (max-width:400px){
+@media screen and (max-width:900px){
     $padding: 16px;
     .tutorialSection{
         width: calc(math.div(100vw,8) * 8);

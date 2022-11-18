@@ -45,3 +45,28 @@ li{
         overscroll-behavior-y: auto;
     }
 }
+
+.avisos{
+    background-color: red;
+
+    .aviso{
+        background-color: purple;
+    }
+
+}
+.pesquisa{
+    input{
+        height: 100%;
+        border: none;
+        outline: none;
+        padding: 4px 2px;
+    }
+    button{
+        border: 1px solid black;
+        padding: 4px 2px;
+        text-transform: uppercase;
+        cursor: pointer;
+        background-color: red;
+        color: white;
+    }
+}

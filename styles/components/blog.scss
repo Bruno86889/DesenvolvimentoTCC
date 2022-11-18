@@ -4,7 +4,10 @@
     width: 90vw;
     min-height: 100%;
     line-height: 32px;
-
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
     h2 {
         font-weight: 200;
     }
@@ -21,4 +24,5 @@
     p {
         text-indent: 16px;
     }
+
 }

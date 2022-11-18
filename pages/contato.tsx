@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
 import {Section } from '@/components/section'
 import { Layout } from '@/components/root';
-import { LargeText } from '@/components/text';
+import { LargeText, SmallText } from '@/components/text';
+import { Mapear } from '@/components/util';
 
 const metaData:MetaData = {
     title: 'Contato',
@@ -11,11 +12,13 @@ const metaData:MetaData = {
     robots:''
 }
 
+
+
+
 const Contato = () => {
     return (
         <Layout meta={metaData}>
             <Section>
-                <LargeText text='contato'/>
             </Section>
         </Layout>
     )
