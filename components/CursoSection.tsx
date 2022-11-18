@@ -1,4 +1,4 @@
-import { LargeText, MainTitle, MediumText, SmallText } from "./text";
+import { MainTitle, MediumText, SmallText } from "./text";
 import Image from "next/image";
 import Link from "next/link";
 import cursos from "@/styles/cursos.module.scss";
