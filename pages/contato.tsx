@@ -12,9 +12,6 @@ const metaData:MetaData = {
     robots:''
 }
 
-
-
-
 const Contato = () => {
     return (
         <Layout meta={metaData}>

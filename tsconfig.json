@@ -19,7 +19,7 @@
       "@/components/*": ["./components/*"],
       "@/styles/*":["./styles/*"],
       "@/posts/*":["./posts/*"],
-      "@/images/*":["./uploads/images/*"],
+      "@/images/*":["./public/uploads/images/*"],
       "@/documents/*": ["./uploads/documents/*"],
       "@/videos/*": ["./uploads/videos/*"],
       "@/data/*":["./data/*"]

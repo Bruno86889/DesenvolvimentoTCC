@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { SectionTitle, SmallText } from './text';
-import tutorial from '../styles/tutorial.module.scss';
+import tutorial from '@/styles/tutorial.module.scss';
+import carousel from "@/styles/carousel.module.scss";
+
 import { Mapear } from './util';
+
 
 export interface TutorialItems {
     url: string,
@@ -33,27 +36,25 @@ export const TutorialSection = (props: { data: TutorialSectionData }) => {
 }
 
 const Carousel = (props: { className?: string, items: any[], itemModel: any }) => {
+    const visibleBalls = useRef(0)
+
+    useEffect(()=>{
+        //
+    })
+    
     return (
-        <div className={`carousel ${props?.className}`}>
-            <div className='runner'>
+        <div className={`${carousel.carousel} ${props?.className}`}>
+            <div>
                 {Mapear(props.itemModel, props.items)}
+            </div>
+            <div>
+                <span>{visibleBalls.current}</span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     )
 }
-
-const TurorialCarousel = (props: { items: TutorialList }) => {
-    return (
-        <div className={tutorial.tutorialCarousel}>
-            {/* {props.items.map((item:TutorialItems,ind:number)=>{
-                return <TutorialItem key={ind} src={item?.src} url={item?.url} text={item?.text}/>
-            })} */}
-            {/* {Mapear(TutorialItem,props.items)} */}
-        </div>
-    )
-}
-
-
 
 const TutorialItem = ({ url, text, src }: TutorialItems) => {
     return (

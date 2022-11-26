@@ -11,7 +11,6 @@ import Footer from '@/components/footer';
 import Galeria from '@/components/galeria';
 
 import institucional from '@/styles/institucional.module.scss';
-import Feed from '@/components/feed';
 
 const metaData: MetaData = {
     title: 'Etec Ferrúcio Humberto Gazzetta',
