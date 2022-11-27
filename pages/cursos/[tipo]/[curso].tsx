@@ -3,9 +3,10 @@
 import { Section } from '@/components/section';
 
 import React, { useEffect, useState } from 'react';
-import { Layout } from '@/components/root';
+import { BlogLayout } from '@/components/root';
 import { cursos } from '@/data/cursosData';
 import { MainTitle, MediumText } from '@/components/text';
+import Image from "next/image";
 
 const metaData: MetaData = {
     title: 'Cursos',
@@ -16,9 +17,9 @@ const metaData: MetaData = {
 
 const Curso = (props: { curso: CursoData }) => {
     return (
-        <Layout meta={metaData}>
-            <Section>
+        <BlogLayout meta={metaData}>
                 <MainTitle text={props.curso.nome} />
+                <Image priority className='image' src={props.curso.img} width={200} height={100} alt={props.curso.path}/>
                 <MediumText text={props.curso.descricao} />
                 <ul>
                     <li>Eixo Tecnológico: {props.curso.eixoTecnologico}</li>
@@ -26,8 +27,7 @@ const Curso = (props: { curso: CursoData }) => {
                     <li>Período: {props.curso.periodo}</li>
                     <li>Tipo de Curso:{props.curso.tipoDeCurso}</li>
                 </ul>
-            </Section>
-        </Layout>
+        </BlogLayout>
     )
 }
 
@@ -53,19 +53,6 @@ export async function getStaticProps({ params }: any) {
     return {
         props: { curso: data }
     }
-}
-
-type CursoData = {
-    nome: string,
-    descricao: string,
-    periodo: string,
-    vagas: number,
-    duracao: string,
-    eixoTecnologico: string,
-    mercadoDeTrabalho: string,
-    tipoDeCurso: string,
-    ativo: boolean,
-    path: string
 }
 
 function getCursos(cursosList: CursoData[]) {

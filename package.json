@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "dev-all": "next dev -H 192.168.1.16",
+    "dev-all": "next dev -H 192.168.1.12",
     "build": "next build",
     "start": "next start",
+    "start-all": "next start -H 192.168.1.12",
     "lint": "next lint"
   },
   "dependencies": {
@@ -21,9 +22,11 @@
     "gray-matter": "^4.0.3",
     "mongoose": "^6.7.0",
     "next": "^13.0.0",
+    "pony-props": "^0.2.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sass": "^1.55.0"
+    "sass": "^1.55.0",
+    "sharp": "^0.31.2"
   },
   "devDependencies": {
     "@types/node": "18.11.4",

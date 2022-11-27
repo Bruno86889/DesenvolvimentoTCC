@@ -4,6 +4,8 @@ import Galeria from '@/components/galeria';
 import { Section } from '@/components/section'
 import { Layout } from '@/components/root';
 
+
+
 const metaData: MetaData = {
     title: 'Fotos da escola',
     description: '',

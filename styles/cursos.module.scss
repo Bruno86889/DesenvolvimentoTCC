@@ -4,6 +4,8 @@
 .cursoPageSection {
     h1{
         width: calc(math.div(100vw, 16) *14.5);
+        height: max-content;
+        color: #000;
     }
     p{
         width: calc(math.div(100vw, 16) *14.5);

@@ -1,6 +1,6 @@
-export {};
+export { };
 
-declare global{
+declare global {
 
     type MetaData = {
         title: string | undefined,
@@ -18,11 +18,11 @@ declare global{
         src: string
     }
 
-    
+
     // 
     type CursoData = {
         nome: string,
-        descricao:string,
+        descricao: string,
         periodo: string,
         vagas: number,
         duracao: string,
@@ -30,16 +30,17 @@ declare global{
         mercadoDeTrabalho: string,
         tipoDeCurso: string,
         ativo: boolean,
-        path: string
+        path: string,
+        img: string
     }
-    
+
     type CardCursoData = {
         nome: string,
         img: string,
         description: string,
         page: string
     }
-    
+
     type CursoPageData = {
         tipoDeCurso: string,
         descricao: string,

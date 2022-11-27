@@ -1,13 +1,14 @@
 @use '../variables/color.scss'as color;
 
 .blog-container {
-    width: 90vw;
+    max-width: 640px;
     min-height: 100%;
     line-height: 32px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     line-height: 2em;
+    padding: 0 16px;
     
     h2 {
         font-weight: 200;
@@ -27,5 +28,10 @@
         text-align: justify;
         line-height: 2em;
     }
-
+    .image{
+        aspect-ratio: 2/1;
+        width: 100%;
+        height: auto;
+        max-width: 640px;
+    }
 }
