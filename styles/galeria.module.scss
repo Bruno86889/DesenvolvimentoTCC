@@ -4,7 +4,7 @@
     max-width: calc(math.div(100vw,16)*14);
     img{
         user-select: none;
-        height: 180px;
+        aspect-ratio: 2/1.5;
         width: 100%;
         object-fit: cover;
     }

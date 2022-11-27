@@ -24,19 +24,37 @@ const Select = () => {
     return (
         <div className='inputSelect'>
             <select name="" id="">
-                
+
             </select>
         </div>
     )
 }
 
-const SecaoDocumentos = ()=>{
+const SecaoDocumentos = () => {
     return (
         <div className='secaoDocumentos'>
 
         </div>
     )
 }
+
+const Documento = ()=>{
+    
+}
+
+const Destaque = () => {
+    return (
+        <div>
+            <SectionTitle text='Processos Seletivos em Aberto' />
+            
+            <div className='aviso'>
+                <p>20/12/2022</p>
+                <strong>Processo seletivo Simplificado</strong>
+            </div>
+        </div>
+    )
+}
+
 const Edital = () => {
     return (
         <Layout meta={metaData}>
@@ -98,10 +116,10 @@ const Edital = () => {
     )
 }
 
-const TabelaDocumentos = ()=>{
+const TabelaDocumentos = () => {
     return (
         <div className='tabelaDocumentos'>
-             
+
         </div>
     )
 }
