@@ -2,234 +2,300 @@
 @use 'variables/screen.scss' as screen;
 @use 'variables/color.scss' as color;
 
-.tutorialSection {
-    $visible-items: 3;
-    $gap-column: 80px;
-    $item-width: calc(math.div(100vw, 16) * 4);
-    $scroll-container-width: calc(($item-width * $visible-items) + ($gap-column * ($visible-items - 1)) + 12px * 2);
 
+.tutorialSection {
     display: flex;
     flex-direction: column;
-    width: $scroll-container-width;
-
-    h1 {
-        display: none;
-    }
-
-    // *,
-    // & {
-    //     border: 1px solid black;
-    //     padding: 0;
-    //     margin: 0;
-    //     gap: 0;
-    //     scroll-snap-type: x mandatory;
-    //     scroll-snap-align: center;
-    //     overflow-x: scroll;
-    //     scroll-behavior: smooth;
-    // }
-
-    .tutorialCarousel {
-        display: grid;
-        grid-template-columns: 32px 1fr 32px;
-        grid-template-areas: "btn1 wrapper btn2";
-
-        .tutorialWrapper {
-            grid-area: wrapper;
-            min-height: 180px;
+    margin: 16px;
+    .carousel {
+        width: calc(math.div(100vw, 16)*14);
+        
+        .tutorialItem {
+            width: 100%;
             display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            
-            .tutorialList {
-                overflow-x: scroll;
-                scroll-snap-type: x mandatory;
-                scroll-snap-align: center;
-                scroll-behavior: smooth;
-                gap: 16px;
-                padding-left: 16px;
-                width: $scroll-container-width;
-
-                .tutorialItem {
-                    max-width: calc(math.div(100%,3) - 32px);
-                    min-height: 180px;
-                    display: flex;
-                    flex-direction: column;
-                    flex: none;
-                    justify-content: center;
-                    overflow-y: hidden;
-                    cursor: pointer;
-                    scroll-snap-type: x mandatory;
-                    scroll-snap-align: center;
-                    box-shadow: 0px 0px 10px -5px #283B3B;
-
-                    a {
-                        width: 100%;
-                        height: 100%;
-                        display: flex;
-                        flex-direction: column;
-                        flex: none;
-                        text-decoration: none;
-                        user-select: none;
-                    }
-
-                    .imgSection {
-                        width: 100%;
-                        height: 150px;
-                        background: white;
-                        object-fit: cover;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-
-                        img {
-                            width: 100%;
-                            height: 100%;
-                            object-fit: contain;
-                        }
-                    }
-
-
-                    .tutorialDescription {
-                        width: 100%;
-                        height: 32px;
-                        background: color.$color-5;
-                        font-weight: bold;
-                        display: flex;
-                        align-items: center;
-
-                        p {
-                            width: 100%;
-                            color: color.$color-1;
-                            text-indent: 8px;
-                        }
-                    }
+            flex-direction: column;
+            flex: none;
+            justify-content: center;
+            overflow-y: hidden;
+            cursor: pointer;
+            scroll-snap-type: x mandatory;
+            scroll-snap-align: center;
+            box-shadow: 0px 0px 10px -5px #283B3B;
+    
+            a {
+                width: 100%;
+                max-height: 100%;
+                display: flex;
+                flex-direction: column;
+                flex: none;
+                text-decoration: none;
+                user-select: none;
+            }
+    
+            .imgSection {
+                width: 100%;
+                height: 150px;
+                background: white;
+                object-fit: cover;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+    
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
                 }
             }
-
-        }
-
-        .leftButton,
-        .rightButton {
-            display: flex;
-            align-items: center;
-
-            button {
-                width: 32px;
+    
+    
+            .tutorialDescription {
+                width: 100%;
+                height: 32px;
+                background: color.$color-5;
+                font-weight: bold;
                 display: flex;
-            }
-        }
-
-        .leftButton {
-            grid-area: btn1;
-        }
-
-        .rightButton {
-            grid-area: btn2;
-        }
-
-        .ponnies {
-            grid-area: pony;
-            background-color: red;
-        }
-    }
-
-    // .tutorialCarousel {
-    //     display: flex;
-    //     flex-direction: column;
-
-    //     .tutorialWrapper {
-    //         height: max-content;
-    //         display: flex;
-    //         flex-direction: row;
-    //         align-items: flex-start;
-    //         // margin-top: 16px;
-    //         column-gap: $gap-column;
-    //         scroll-snap-type: x mandatory;
-    //         scroll-snap-align: center;
-    //         overflow-x: scroll;
-    //         scroll-behavior: smooth;
-    //         .tutorialList{
-    //             .tutorialItem {
-    //                 min-width: 300px;
-    //                 min-height: 180px;
-    //                 display: flex;
-    //                 flex-direction: column;
-    //                 flex: none;
-    //                 justify-content: center;
-    //                 cursor: pointer;
-    //                 scroll-snap-type: x mandatory;
-    //                 scroll-snap-align: center;
-    //                 box-shadow: 0px 0px 10px -5px #283B3B;
-
-    //                 a {
-    //                     width: 100%;
-    //                     height: 100%;
-    //                     display: flex;
-    //                     flex-direction: column;
-    //                     flex: none;
-    //                     text-decoration: none;
-    //                     user-select: none;
-    //                 }
-
-    //                 .imgSection {
-    //                     width: 100%;
-    //                     height: 150px;
-    //                     background: white;
-    //                     object-fit: cover;
-    //                     display: flex;
-    //                     align-items: center;
-    //                     justify-content: center;
-
-    //                     img {
-    //                         width: 100%;
-    //                         height: 100%;
-    //                         object-fit: contain;
-    //                     }
-    //                 }
-
-
-    //                 .tutorialDescription {
-    //                     width: 100%;
-    //                     height: 32px;
-    //                     background: color.$color-5;
-    //                     font-weight: bold;
-    //                     display: flex;
-
-    //                     p {
-    //                         margin-left: 8px;
-    //                         width: 100%;
-    //                         color: color.$color-1;
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
-}
-
-@media screen and (max-width:500px) {
-    $padding: 16px;
-
-    .tutorialSection {
-        width: calc(math.div(100vw, 8) * 8);
-        padding: $padding;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .tutorialCarousel {
-            padding: $padding;
-            width: calc(math.div(100vw, 8) * 6.5 + $padding*2);
-            overflow-x: scroll;
-            gap: 16px;
-
-            .tutorialItem {
-                width: calc(math.div(100vw, 8) * 6.5);
-            }
-
-            .leftButton,.rightButton{
-                display: none;
+                align-items: center;
+    
+                p {
+                    width: 100%;
+                    color: color.$color-1;
+                    text-indent: 8px;
+                }
             }
         }
     }
+
 }
+
+// .tutorialSection {
+//     $visible-items: 3;
+//     $gap-column: 80px;
+//     $item-width: calc(math.div(100vw, 16) * 4);
+//     $scroll-container-width: calc(($item-width * $visible-items) + ($gap-column * ($visible-items - 1)) + 12px * 2);
+
+//     display: flex;
+//     flex-direction: column;
+//     width: $scroll-container-width;
+
+//     h1 {
+//         display: none;
+//     }
+
+//     // *,
+//     // & {
+//     //     border: 1px solid black;
+//     //     padding: 0;
+//     //     margin: 0;
+//     //     gap: 0;
+//     //     scroll-snap-type: x mandatory;
+//     //     scroll-snap-align: center;
+//     //     overflow-x: scroll;
+//     //     scroll-behavior: smooth;
+//     // }
+
+//     .tutorialCarousel {
+//         display: grid;
+//         grid-template-columns: 32px 1fr 32px;
+//         grid-template-areas: "btn1 wrapper btn2";
+
+//         .tutorialWrapper {
+//             grid-area: wrapper;
+//             min-height: 180px;
+//             display: flex;
+//             flex-direction: row;
+//             align-items: flex-start;
+
+//             .tutorialList {
+//                 overflow-x: scroll;
+//                 scroll-snap-type: x mandatory;
+//                 scroll-snap-align: center;
+//                 scroll-behavior: smooth;
+//                 gap: 16px;
+//                 padding-left: 16px;
+//                 width: $scroll-container-width;
+
+//                 .tutorialItem {
+//                     max-width: calc(math.div(100%,3) - 32px);
+//                     min-height: 180px;
+//                     display: flex;
+//                     flex-direction: column;
+//                     flex: none;
+//                     justify-content: center;
+//                     overflow-y: hidden;
+//                     cursor: pointer;
+//                     scroll-snap-type: x mandatory;
+//                     scroll-snap-align: center;
+//                     box-shadow: 0px 0px 10px -5px #283B3B;
+
+//                     a {
+//                         width: 100%;
+//                         height: 100%;
+//                         display: flex;
+//                         flex-direction: column;
+//                         flex: none;
+//                         text-decoration: none;
+//                         user-select: none;
+//                     }
+
+//                     .imgSection {
+//                         width: 100%;
+//                         height: 150px;
+//                         background: white;
+//                         object-fit: cover;
+//                         display: flex;
+//                         align-items: center;
+//                         justify-content: center;
+
+//                         img {
+//                             width: 100%;
+//                             height: 100%;
+//                             object-fit: contain;
+//                         }
+//                     }
+
+
+//                     .tutorialDescription {
+//                         width: 100%;
+//                         height: 32px;
+//                         background: color.$color-5;
+//                         font-weight: bold;
+//                         display: flex;
+//                         align-items: center;
+
+//                         p {
+//                             width: 100%;
+//                             color: color.$color-1;
+//                             text-indent: 8px;
+//                         }
+//                     }
+//                 }
+//             }
+
+//         }
+
+//         .leftButton,
+//         .rightButton {
+//             display: flex;
+//             align-items: center;
+
+//             button {
+//                 width: 32px;
+//                 display: flex;
+//             }
+//         }
+
+//         .leftButton {
+//             grid-area: btn1;
+//         }
+
+//         .rightButton {
+//             grid-area: btn2;
+//         }
+
+//         .ponnies {
+//             grid-area: pony;
+//             background-color: red;
+//         }
+//     }
+
+//     // .tutorialCarousel {
+//     //     display: flex;
+//     //     flex-direction: column;
+
+//     //     .tutorialWrapper {
+//     //         height: max-content;
+//     //         display: flex;
+//     //         flex-direction: row;
+//     //         align-items: flex-start;
+//     //         // margin-top: 16px;
+//     //         column-gap: $gap-column;
+//     //         scroll-snap-type: x mandatory;
+//     //         scroll-snap-align: center;
+//     //         overflow-x: scroll;
+//     //         scroll-behavior: smooth;
+//     //         .tutorialList{
+//     //             .tutorialItem {
+//     //                 min-width: 300px;
+//     //                 min-height: 180px;
+//     //                 display: flex;
+//     //                 flex-direction: column;
+//     //                 flex: none;
+//     //                 justify-content: center;
+//     //                 cursor: pointer;
+//     //                 scroll-snap-type: x mandatory;
+//     //                 scroll-snap-align: center;
+//     //                 box-shadow: 0px 0px 10px -5px #283B3B;
+
+//     //                 a {
+//     //                     width: 100%;
+//     //                     height: 100%;
+//     //                     display: flex;
+//     //                     flex-direction: column;
+//     //                     flex: none;
+//     //                     text-decoration: none;
+//     //                     user-select: none;
+//     //                 }
+
+//     //                 .imgSection {
+//     //                     width: 100%;
+//     //                     height: 150px;
+//     //                     background: white;
+//     //                     object-fit: cover;
+//     //                     display: flex;
+//     //                     align-items: center;
+//     //                     justify-content: center;
+
+//     //                     img {
+//     //                         width: 100%;
+//     //                         height: 100%;
+//     //                         object-fit: contain;
+//     //                     }
+//     //                 }
+
+
+//     //                 .tutorialDescription {
+//     //                     width: 100%;
+//     //                     height: 32px;
+//     //                     background: color.$color-5;
+//     //                     font-weight: bold;
+//     //                     display: flex;
+
+//     //                     p {
+//     //                         margin-left: 8px;
+//     //                         width: 100%;
+//     //                         color: color.$color-1;
+//     //                     }
+//     //                 }
+//     //             }
+//     //         }
+//     //     }
+//     // }
+// }
+
+// @media screen and (max-width:500px) {
+//     $padding: 16px;
+
+//     .tutorialSection {
+//         width: calc(math.div(100vw, 8) * 8);
+//         padding: $padding;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+
+//         .tutorialCarousel {
+//             padding: $padding;
+//             width: calc(math.div(100vw, 8) * 6.5 + $padding*2);
+//             overflow-x: scroll;
+//             gap: 16px;
+
+//             .tutorialItem {
+//                 width: calc(math.div(100vw, 8) * 6.5);
+//             }
+
+//             .leftButton,.rightButton{
+//                 display: none;
+//             }
+//         }
+//     }
+// }

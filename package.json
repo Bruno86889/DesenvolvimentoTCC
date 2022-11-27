@@ -18,6 +18,7 @@
     "@mdx-js/react": "^2.1.5",
     "@next/font": "^13.0.0",
     "@next/mdx": "^13.0.2",
+    "better-react-carousel": "^1.1.1",
     "front-matter": "^4.0.2",
     "gray-matter": "^4.0.3",
     "mongoose": "^6.7.0",

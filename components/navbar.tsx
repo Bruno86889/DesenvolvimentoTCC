@@ -33,6 +33,7 @@ const Navbar = () => {
                     <LargeText text='etec fhg' />
                     <SmallText text='Ferrúcio Humberto Gazzetta' />
                     <SmallText text='Nova Odessa' />
+                    {/* <Image alt='logo' src={'/etec_ra.png'} width={100} height={90} style={{ objectFit: "contain" }} priority /> */}
                 </div>
 
                 <div className={active ? 'icon active' : 'icon'} onClick={() => {
