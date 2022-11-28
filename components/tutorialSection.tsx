@@ -29,7 +29,7 @@ export const TutorialSection = (props: { data: TutorialSectionData }) => {
             {/* <TurorialCarousel items={props.data.tutorials}/> */}
             <Carousel containerClassName={tutorial.carousel} cols={3} rows={1} gap={16} loop scrollSnap showDots={props.data.tutorials.length < 4 ? false : true} hideArrow={props.data.tutorials.length < 4 ? true : false}>
                 {props.data.tutorials.map((tutorialItem, i) => {
-                    return <Carousel.Item >
+                    return <Carousel.Item key={i}>
                         <TutorialItem {...tutorialItem} key={i} />
                     </Carousel.Item>
                 })}

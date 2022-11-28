@@ -1,0 +1,43 @@
+@use 'sass:math' as math;
+@use 'variables/color.scss' as color;
+
+.editais {
+    width: calc(math.div(100vw, 16)*14);
+    height: calc(math.div(100vh, 16)*14);
+    display: flex;
+    flex-direction: column;
+    // display: grid;
+    // grid-template-columns: .6fr 3fr;
+    gap: 32px;
+
+    .pesquisa {
+        width: 100%;
+        // padding: 8px;
+        max-width: 640px;
+        .button {
+            width: 100%;
+            text-transform: uppercase;
+            margin-top: 8px;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+    }
+
+    .containerDocumentos {
+        .secaoDocumento {
+            margin: 16px 0;
+
+            a {
+                color: color.$color-2;
+
+            }
+        }
+    }
+}
+
+@media screen and (min-width:900px) {
+    .editais {
+        display: grid;
+        grid-template-columns: .6fr 3fr;
+    }
+}

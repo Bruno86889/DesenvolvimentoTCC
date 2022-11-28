@@ -18,7 +18,7 @@ export const newsData: NewsData[] = [
         titulo: '28ª SIPAT',
         subtitulo: "O Evento ocorrerá nos dias 21, 22 e 23 de Novembro a partir das 19h",
         src: "sipat.jpg",
-        url: 'blog/xiix-sipat'
+        url: 'blog/xxiix-sipat'
     },
     {
         data: '04/11/22',

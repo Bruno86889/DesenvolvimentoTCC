@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import { Section } from '@/components/section';
 import { Layout } from '@/components/root';
 import { LargeText, MainTitle, MediumText, SectionTitle, SmallText, SubTitle } from '@/components/text';
 import Link from 'next/link';
+import Select from 'react-select';
+import edital from "@/styles/edital.module.scss";
 
 const metaData: MetaData = {
     title: 'Editais',
@@ -11,116 +13,205 @@ const metaData: MetaData = {
     keywords: '',
     robots: ''
 }
-const InputPesquisa = () => {
-    return (
-        <div className='inputPesquisa'>
-            <input type="text" />
-            <button>Pesquisar</button>
-        </div>
-    )
-}
 
-const Select = () => {
-    return (
-        <div className='inputSelect'>
-            <select name="" id="">
+const tipoList = [
+    { value: '0', label: "Nunhum" },
+    { value: '', label: "Todos" },
+    { value: 'processo-seletivo', label: "Processo Seletivo" },
+    { value: 'plano-de-curso', label: "Plano de Curso" },
+    { value: 'vagas-remancentes', label: "Vagas Remancentes" },
+    { value: 'outro', label: "Outro" },
+]
 
-            </select>
-        </div>
-    )
-}
-
-const SecaoDocumentos = () => {
-    return (
-        <div className='secaoDocumentos'>
-
-        </div>
-    )
-}
-
-const Documento = ()=>{
-    
-}
-
-const Destaque = () => {
-    return (
-        <div>
-            <SectionTitle text='Processos Seletivos em Aberto' />
-            
-            <div className='aviso'>
-                <p>20/12/2022</p>
-                <strong>Processo seletivo Simplificado</strong>
-            </div>
-        </div>
-    )
-}
+const situacaoList = [
+    { value: '0', label: "Nenhum" },
+    { value: '', label: "Todos" },
+    { value: 'aberto', label: "Em aberto" },
+    { value: 'encerrado', label: "Encerrado" },
+    { value: 'resultado', label: "Resultado" },
+]
 
 const Edital = () => {
+    const tipo = useRef('0')
+    const situacao = useRef('0')
+    const nome = useRef('')
+    const [search, setSearch] = useState(false)
+
+    const [data, setData] = useState(editalData)
+
+    const filteredData = useMemo(() =>
+        data.filter((doc) => doc.tipo.includes(tipo.current) && doc.situacao.includes(situacao.current))
+        , [search])
+
     return (
         <Layout meta={metaData}>
             <Section>
-                <div className='avisos'>
-                    Processos seletivos em aberto
+                <div className={edital.editais}>
 
-                    <div className='aviso'>
-                        <p>20/12/2022</p>
-                        <strong>Processo seletivo Simplificado</strong>
+                    <div className={edital.pesquisa}>
+                        <label htmlFor="">Tipo de documento</label>
+                        <Select options={tipoList} onChange={(e) => tipo.current = e?.value || ''} placeholder/>
+
+                        <label htmlFor="">Situação</label>
+                        <Select options={situacaoList} onChange={(e) => situacao.current = e?.value || ''} placeholder/> 
+
+                        <button className={edital.button} onClick={() => setSearch(!search)}>Pesquisar</button>
                     </div>
-                </div>
 
-                <div>
-                    Ultimas atualizações
-                </div>
+                    <div className={edital.containerDocumentos}>
+                        <SubTitle>EDITAIS E DOCUMENTOS</SubTitle>
+                        {Object.keys(filteredData.reduce((acc, obj) => {
+                            let key = obj.tipo
+                            if (!acc[key]) {
+                                acc[key] = []
+                            }
 
-                <div className="pesquisa">
-
-                    <InputPesquisa />
-                    <label htmlFor="ano">Ano</label>
-                    <select name="ano" id="ano">
-                        <option value="">Ano</option>
-                        <option value="">2022</option>
-                        <option value="">2021</option>
-                        <option value="">2020</option>
-                    </select>
-
-                    <label htmlFor="tipo">Tipo de documento</label>
-                    <select name="tipo" id="tipo">
-                        <option value="">Tipo de Documento</option>
-                        <option value="">Processo Seletivo</option>
-                        <option value="">Plano de curso</option>
-                        <option value="">Vagas Remanecentes</option>
-                        <option value="">Outros</option>
-                    </select>
-                </div>
-                <div className="tudo">
-                    todos os documentos pesquisados
-
-                    <table>
-                        <thead>
-                            <th>Data</th>
-                            <th>Documento</th>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>20/10/2022</td>
-                                <td>
-                                    <Link target="_blank" rel="noopener noreferer" href={'adm.jpg'}>T96</Link>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <button>mostrar mais</button>
+                            acc[key].push(obj)
+                            return acc
+                        }, {})).map((tipo) => {
+                            return <>
+                                <SectionTitle text={tipo.replace("-", " ").toUpperCase()} />
+                                <div className={edital.secaoDocumento}>
+                                    {filteredData.map((doc) => {
+                                        return <SecaoDocumento {...doc} />
+                                    })}
+                                </div>
+                            </>
+                        })}
+                    </div>
                 </div>
             </Section>
         </Layout>
     )
 }
 
-const TabelaDocumentos = () => {
+const SecaoDocumento = (props: EditalDocumento) => {
     return (
-        <div className='tabelaDocumentos'>
-
+        <div className={edital.secaoDocumento}>
+            <Link target={'_blank'} href={props.url}>{props.situacao == 'resultado' ? `(RESULTADO) Edital n° ${props.numero} ${props.label}` : `Edital n° ${props.numero} ${props.label}`}</Link>
         </div>
     )
 }
 export default Edital;
+
+interface EditalDocumento {
+    numero: string,
+    label: string,
+    url: string,
+    tipo: 'processo-seletivo' | 'plano-de-curso' | 'vagas-remancentes' | 'outros',
+    situacao: 'aberto' | 'encerrado' | 'resultado' | '0',
+    ano: number,
+    semestre: 0 | 1
+}
+
+
+const editalData: EditalDocumento[] = [
+    {
+        numero: "234/06/2022",
+        label: "Operação e Configuração de Aplicativos II (Informática)",
+        url: "https://etecdenovaodessa.com.br/wp-content/uploads/2022/03/234-06-2022-PSS-DEFERIMENTO_INDEFERIMENTO-SEM-PPI.pdf",
+        tipo: "processo-seletivo",
+        situacao: "resultado",
+        ano: 2022,
+        semestre: 1
+    },
+    {
+        numero: "1234",
+        label: "Processo Seletivo Simplificado",
+        url: "https://etecdenovaodessa.com.br/wp-content/uploads/2022/05/2022-04-29-Ricardo_ProcSeletivo-CORRIGIDO.pdf",
+        tipo: "processo-seletivo",
+        situacao: "aberto",
+        ano: 2022,
+        semestre: 1
+    },
+    {
+        numero: "234/06/2022",
+        label: "Operação e Configuração de Aplicativos II (Informática)",
+        url: "https://etecdenovaodessa.com.br/wp-content/uploads/2022/02/PPS_Edital-de-Abertura_Edital_-234_06_2022.pdf",
+        tipo: "processo-seletivo",
+        situacao: "encerrado",
+        ano: 2022,
+        semestre: 1
+    },
+
+    {
+        ano: 2022,
+        semestre: 0,
+        label: "ETIM Desenvolvimento de Sistemas",
+        numero: "12",
+        situacao: "resultado",
+        tipo: "vagas-remancentes",
+        url: "https://etecdenovaodessa.com.br/wp-content/uploads/2021/12/Edital-12-VAGAS-REMANESCENTES-ETIM-DESENV.-SISTEMAS.pdf"
+    },
+
+    {
+        ano: 2022,
+        semestre: 0,
+        label: "ETIM Desenvolvimento de Sistemas",
+        numero: "12",
+        situacao: "encerrado",
+        tipo: "vagas-remancentes",
+        url: "https://etecdenovaodessa.com.br/wp-content/uploads/2021/12/Edital-12-VAGAS-REMANESCENTES-ETIM-DESENV.-SISTEMAS.pdf"
+    },
+    {
+        ano: 2019,
+        semestre: 0,
+        label:'Regimento Comum das Etecs',
+        numero: '',
+        situacao: '0',
+        tipo: 'outros',
+        url: 'https://etecdenovaodessa.com.br/wp-content/uploads/2021/05/Regimento-Comum-das-Etecs.pdf'
+    }
+]
+
+const docs = {
+    'processo-seletivo': [
+        {
+            numero: '1234',
+            label: 'Processo Seletivo Simplificado',
+            url: 'https://etecdenovaodessa.com.br/wp-content/uploads/2022/05/2022-04-29-Ricardo_ProcSeletivo-CORRIGIDO.pdf',
+            tipo: 'processo-seletivo',
+            situacao: 'aberto',
+            ano: 2022,
+            semestre: 1
+        },
+        {
+            numero: '234/06/2022',
+            label: 'Operação e Configuração de Aplicativos II (Informática)',
+            url: 'https://etecdenovaodessa.com.br/wp-content/uploads/2022/02/PPS_Edital-de-Abertura_Edital_-234_06_2022.pdf',
+            tipo: 'processo-seletivo',
+            situacao: 'encerrado',
+            ano: 2022,
+            semestre: 1
+        },
+        {
+            numero: '234/06/2022',
+            label: 'Operação e Configuração de Aplicativos II (Informática)',
+            url: 'https://etecdenovaodessa.com.br/wp-content/uploads/2022/03/234-06-2022-PSS-DEFERIMENTO_INDEFERIMENTO-SEM-PPI.pdf',
+            tipo: 'processo-seletivo',
+            situacao: 'resultado',
+            ano: 2022,
+            semestre: 1
+        }
+    ],
+    'vagas-remancentes': [
+        {
+            ano: 2022,
+            semestre: 0,
+            label: 'ETIM Desenvolvimento de Sistemas',
+            numero: '12',
+            situacao: 'encerrado',
+            tipo: 'vagas-remancentes',
+            url: 'https://etecdenovaodessa.com.br/wp-content/uploads/2021/12/Edital-12-VAGAS-REMANESCENTES-ETIM-DESENV.-SISTEMAS.pdf'
+        },
+        {
+            ano: 2022,
+            semestre: 0,
+            label: 'ETIM Desenvolvimento de Sistemas',
+            numero: '12',
+            situacao: 'resultado',
+            tipo: 'vagas-remancentes',
+            url: 'https://etecdenovaodessa.com.br/wp-content/uploads/2021/12/Edital-12-VAGAS-REMANESCENTES-ETIM-DESENV.-SISTEMAS.pdf'
+        }
+    ]
+}
