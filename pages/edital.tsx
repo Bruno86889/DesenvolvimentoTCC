@@ -40,7 +40,7 @@ const Edital = () => {
     const [data, setData] = useState(editalData)
 
     const filteredData = useMemo(() =>
-        data.filter((doc) => doc.tipo.includes(tipo.current) && doc.situacao.includes(situacao.current))
+        data?.filter((doc) => doc.tipo.includes(tipo.current) && doc.situacao.includes(situacao.current))
         , [search])
 
     return (
@@ -60,7 +60,7 @@ const Edital = () => {
 
                     <div className={edital.containerDocumentos}>
                         <SubTitle>EDITAIS E DOCUMENTOS</SubTitle>
-                        {Object.keys(filteredData.reduce((acc, obj) => {
+                        {Object.keys(filteredData.reduce((acc:any, obj) => {
                             let key = obj.tipo
                             if (!acc[key]) {
                                 acc[key] = []
@@ -72,8 +72,8 @@ const Edital = () => {
                             return <>
                                 <SectionTitle text={tipo.replace("-", " ").toUpperCase()} />
                                 <div className={edital.secaoDocumento}>
-                                    {filteredData.map((doc) => {
-                                        return <SecaoDocumento {...doc} />
+                                    {filteredData.map((doc,i) => {
+                                        return <SecaoDocumento key={i} {...doc} />
                                     })}
                                 </div>
                             </>
@@ -99,7 +99,7 @@ interface EditalDocumento {
     label: string,
     url: string,
     tipo: 'processo-seletivo' | 'plano-de-curso' | 'vagas-remancentes' | 'outros',
-    situacao: 'aberto' | 'encerrado' | 'resultado' | '0',
+    situacao: 'aberto' | 'encerrado' | 'resultado',
     ano: number,
     semestre: 0 | 1
 }
@@ -158,7 +158,7 @@ const editalData: EditalDocumento[] = [
         semestre: 0,
         label:'Regimento Comum das Etecs',
         numero: '',
-        situacao: '0',
+        situacao: 'aberto',
         tipo: 'outros',
         url: 'https://etecdenovaodessa.com.br/wp-content/uploads/2021/05/Regimento-Comum-das-Etecs.pdf'
     }
