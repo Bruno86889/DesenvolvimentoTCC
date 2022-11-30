@@ -1,15 +1,30 @@
 import {BlogLayout} from '@/components/root'
+import Image from "next/image";
+
 
 # Festival de Dança está de volta!
 
 ## O evento volta em sua 7ª Edição e ocorrerá nos dias 8 e 9 de dezembro a partir das 19h
 
+<Image src={'/uploads/img/festival.jpg'} width={200} height={100} alt='fstival de dança'/>
+
 O VII Festival de Dança da Etec Ferrúcio Humberto Gazzetta ocorrerá nos dias 8 e 9 de Dezembro.
-O evento ocorre anualmente e é uma forma de 
+O primeiro dia conta com apresentações dos primeiro anos enquanto no segundo dia serão os segundos e 
+terceiros anos a se apresentarem.
+
+Os ingressos podem ser comprados somente com alunos do ETIM, com cada um custando R$10,00 se vendidos no mês de novembro e 
+R$12,00 se forem vendidos no mês de Dezembro.
+
+<Image src={'/uploads/img/festival2.jpg'} width={200} height={100} alt='valores dos ingressos'/>
+
+Ao todo serão 11 apresentações, com cada uma durando no máximo 20 minutos junto com a premiação da melhor apresentação,
+melhor cenário, melhor dançarino e da sala que vendeu mais ingressos. Venha prestigiar as apresentações de nossos alunos! 
+
+
 
 export default ({children}) => <BlogLayout meta={{
     title: 'VII Festival de Dança',
-    description: 'O evento volta emm sua 7ª Edição e ocorrerá nos dias 8 e 9 de dezembro a partir das 19h',
+    description: 'O evento volta em sua 7ª Edição e ocorrerá nos dias 8 e 9 de dezembro a partir das 19h',
     keywords: '',
     robots: ''
 }}>{children}</BlogLayout>

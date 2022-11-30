@@ -9,6 +9,7 @@
     flex-direction: column;
     line-height: 2em;
     padding: 0 16px;
+    align-items: center;
     
     h2 {
         font-weight: 200;
@@ -28,10 +29,17 @@
         text-align: justify;
         line-height: 2em;
     }
+
     .image{
         aspect-ratio: 2/1;
         width: 100%;
         height: auto;
         max-width: 640px;
+    }
+    img{
+        aspect-ratio: 1/1;
+        width: 100%;
+        height: auto;
+        // max-width: 480px;
     }
 }

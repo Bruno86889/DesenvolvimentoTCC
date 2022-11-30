@@ -25,7 +25,7 @@ export const newsData: NewsData[] = [
         titulo: 'Concurso público',
         subtitulo: "Estão abertas as incrições para os concursos públicos de professores e axiliares administrativos",
         src: "concursopublico.jpg",
-        url: 'blog/concurso-publico'
+        url: 'blog/concurso-publico-professor'
     },
     {
         data: '03/11/22',
