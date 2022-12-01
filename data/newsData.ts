@@ -29,9 +29,9 @@ export const newsData: NewsData[] = [
     },
     {
         data: '03/11/22',
-        titulo: 'Venha conhecer nossa ETEC no ETEC portas abertas',
-        subtitulo: "O evento tem como objetivo divulgar as atividades da escola para os pais e responsáveis",
-        url: 'blog/etec-portas-abertas',
-        src: "etecportasabertas.jpg"
+        titulo: 'Inscrições para o Vestibulinho Etec prorrogadas!',
+        subtitulo: "Incrições podem ser feitas até o dia 23/11/2022 até as 15h",
+        url: 'blog/vestibulinho',
+        src: "vestibulinho.jpg"
     },
 ]

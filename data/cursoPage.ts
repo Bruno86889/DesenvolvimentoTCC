@@ -24,24 +24,24 @@ export const etim: CursoPageData =
     ]
 }
 
-export const novoTec: CursoPageData = {
-    tipoDeCurso: "NovoTEC",
-    descricao: "Lorem Ipsum Dolor Sit Atem",
-    cursos: [
-        {
-            nome: "Recursos Humanos",
-            description: "",
-            img: "/rh.jpg",
-            page: "/cursos/novotec/recursos-humanos"
-        },
-        {
-            nome: "Linguagens, Humanas e Ciências Sociais",
-            description: "",
-            img: "/etec1.svg",
-            page: "/cursos/novotec/linguagens-humanas"
-        }
-    ]
-}
+// export const novoTec: CursoPageData = {
+//     tipoDeCurso: "NovoTEC",
+//     descricao: "Lorem Ipsum Dolor Sit Atem",
+//     cursos: [
+//         {
+//             nome: "Recursos Humanos",
+//             description: "",
+//             img: "/rh.jpg",
+//             page: "/cursos/novotec/recursos-humanos"
+//         },
+//         {
+//             nome: "Linguagens, Humanas e Ciências Sociais",
+//             description: "",
+//             img: "/lhs.jpg",
+//             page: "/cursos/novotec/linguagens-humanas"
+//         }
+//     ]
+// }
 
 export const modular: CursoPageData = {
     tipoDeCurso: "Ensino Técnico Modular",
@@ -62,7 +62,7 @@ export const modular: CursoPageData = {
         {
             nome: "Logística",
             description: "O Técnico em Logística é o profissional que colabora na gestão dos processos de planejamento, operação e controle de programação da produção de bens e serviços, programação de manutenção de máquinas.",
-            img: "/etec1.svg",
+            img: "/log.jpg",
             page: "/cursos/modular/logistica"
         },
         {
@@ -70,12 +70,6 @@ export const modular: CursoPageData = {
             description: "O Técnico em Recursos Humanos aplica testes em processos seletivos, contrata e demite funcionários e auxilia no treinamento e capacitação do colaboradores",
             img: "/rh.jpg",
             page: "/cursos/modular/recursos-humanos"
-        },
-        {
-            nome: "Qualidade",
-            description: "O Técnico em Qualidade executa rotinas administrativas de acordo com as normas e procedimentos técnicos de qualidadde e de segurnaça específico da área de atuação.",
-            img: "/etec1.svg",
-            page: "/cursos/modular/qualidade"
         },
         {
             nome: "Segurança do trabalho",

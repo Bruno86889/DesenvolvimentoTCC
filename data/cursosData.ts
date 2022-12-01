@@ -156,7 +156,6 @@ const modQLD: CursoData = {
 
 export const cursos = [
     etimADM, etimDS, etimMKT,
-    modADM, modINFO, modLOG, modQLD, modRH, modST,
-    mtRH, mtLHS
+    modADM, modINFO, modLOG, modRH, modST
 ]
 

@@ -88,7 +88,7 @@ const Edital = () => {
 const SecaoDocumento = (props: EditalDocumento) => {
     return (
         <div className={edital.secaoDocumento}>
-            <Link target={'_blank'} href={props.url}>{props.situacao == 'resultado' ? `(RESULTADO) Edital n° ${props.numero} ${props.label}` : `Edital n° ${props.numero} ${props.label}`}</Link>
+            <Link target={'_blank'} href={props.url}>{props.situacao == 'resultado' ? `(RESULTADO) ${props.label}` :props.label}</Link>
         </div>
     )
 }
@@ -109,7 +109,7 @@ interface EditalDocumento {
 const editalData: EditalDocumento[] = [
     {
         numero: "234/06/2022",
-        label: "Operação e Configuração de Aplicativos II (Informática)",
+        label: "Edital n° 12 Operação e Configuração de Aplicativos II (Informática)",
         url: "https://etecdenovaodessa.com.br/wp-content/uploads/2022/03/234-06-2022-PSS-DEFERIMENTO_INDEFERIMENTO-SEM-PPI.pdf",
         tipo: "processo-seletivo",
         situacao: "resultado",
@@ -118,7 +118,7 @@ const editalData: EditalDocumento[] = [
     },
     {
         numero: "1234",
-        label: "Processo Seletivo Simplificado",
+        label: "Edital n°1234 Processo Seletivo Simplificado",
         url: "https://etecdenovaodessa.com.br/wp-content/uploads/2022/05/2022-04-29-Ricardo_ProcSeletivo-CORRIGIDO.pdf",
         tipo: "processo-seletivo",
         situacao: "aberto",
@@ -127,7 +127,7 @@ const editalData: EditalDocumento[] = [
     },
     {
         numero: "234/06/2022",
-        label: "Operação e Configuração de Aplicativos II (Informática)",
+        label: "Edital n°234/06/2022 Operação e Configuração de Aplicativos II (Informática)",
         url: "https://etecdenovaodessa.com.br/wp-content/uploads/2022/02/PPS_Edital-de-Abertura_Edital_-234_06_2022.pdf",
         tipo: "processo-seletivo",
         situacao: "encerrado",
@@ -138,7 +138,7 @@ const editalData: EditalDocumento[] = [
     {
         ano: 2022,
         semestre: 0,
-        label: "ETIM Desenvolvimento de Sistemas",
+        label: "Edital n°12 ETIM Desenvolvimento de Sistemas",
         numero: "12",
         situacao: "resultado",
         tipo: "vagas-remancentes",
@@ -148,7 +148,7 @@ const editalData: EditalDocumento[] = [
     {
         ano: 2022,
         semestre: 0,
-        label: "ETIM Desenvolvimento de Sistemas",
+        label: "Edital n°12 ETIM Desenvolvimento de Sistemas",
         numero: "12",
         situacao: "encerrado",
         tipo: "vagas-remancentes",
